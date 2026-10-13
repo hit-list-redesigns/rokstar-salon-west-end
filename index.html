@@ -767,7 +767,7 @@ footer a:hover{color:var(--plat)}
   /* lights on */
   var lightsOn=function(){requestAnimationFrame(function(){document.body.classList.add('lit');document.documentElement.classList.add('lit')})};
   if(document.readyState==='complete')setTimeout(lightsOn,150);else window.addEventListener('load',function(){setTimeout(lightsOn,150)});
-  setTimeout(lightsOn,2500);
+  setTimeout(function(){document.body.classList.add('lit');document.documentElement.classList.add('lit')},2500);
 
   /* open / closed (Brisbane time, no daylight saving) */
   var HOURS={2:[570,1260],3:[540,1140],4:[570,1260],5:[540,900]};
