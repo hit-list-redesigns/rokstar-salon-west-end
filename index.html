@@ -145,10 +145,12 @@ h2{font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(2.1rem,4vw
 .work-grid .glass{aspect-ratio:auto}
 .w1{grid-column:span 4;aspect-ratio:4/5}.w2{grid-column:span 4;aspect-ratio:4/5}.w3{grid-column:span 4;aspect-ratio:4/5}
 .w4{grid-column:span 5;aspect-ratio:auto;height:clamp(280px,32vw,460px)}.w5{grid-column:span 7;aspect-ratio:auto;height:clamp(280px,32vw,460px)}
-.ba{position:relative;aspect-ratio:288/450;overflow:hidden;background:var(--steel-2);--x:50%;touch-action:pan-y}
-.ba .after,.ba .before{position:absolute;inset:0;background-size:200% 100%;background-repeat:no-repeat}
-.ba .after{background-position:100% 0}
-.ba .before{background-position:0 0;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.ba{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--steel-2);--x:50%;touch-action:pan-y}
+.crop{position:relative;overflow:hidden;display:block}
+.crop img{position:absolute;left:0;top:0;max-width:none;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .35s var(--ease)}
+.crop img.placed{opacity:1}
+.ba .layer{position:absolute;inset:0}
+.ba .before{clip-path:inset(0 calc(100% - var(--x)) 0 0)}
 .ba .squeegee{position:absolute;top:0;bottom:0;left:var(--x);width:0;pointer-events:none}
 .ba .squeegee::before{content:"";position:absolute;top:0;bottom:0;left:-3px;width:6px;background:#0d0f0f;border-left:1px solid rgba(255,255,255,.35);border-right:1px solid rgba(255,255,255,.35)}
 .ba .squeegee i{position:absolute;top:50%;left:-24px;width:48px;height:64px;margin-top:-32px;display:flex;align-items:center;justify-content:center;background:var(--steel);border:1px solid #5b6160;border-radius:3px;box-shadow:0 8px 18px -8px rgba(0,0,0,.85);color:var(--plat)}
@@ -159,7 +161,7 @@ h2{font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(2.1rem,4vw
 .ba .tb{left:14px}.ba .ta{right:14px}
 /* results stage */
 .res{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(32px,5vw,88px);align-items:center}
-.stage-frame{background:var(--steel);padding:var(--mull);width:clamp(300px,calc((100svh - 260px) * .64 + 24px),470px)}
+.stage-frame{background:var(--steel);padding:var(--mull);width:clamp(320px,calc((100svh - 250px) * .8 + 24px),560px)}
 .res-head p{margin:18px 0 0;color:var(--ink-2);max-width:46ch;font-size:1.02rem}
 .res-now{border-top:1px solid var(--ink);padding-top:22px}
 .stage{width:100%}
@@ -168,7 +170,8 @@ h2{font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(2.1rem,4vw
 .res-now p{margin:12px 0 0;color:var(--ink-2);max-width:46ch}
 .thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
 .thumb{appearance:none;display:flex;flex-direction:column;gap:8px;padding:6px 6px 10px;background:transparent;border:1px solid var(--pane-line);border-radius:2px;color:var(--ink);text-align:left;font-size:.84rem;line-height:1.3;transition:border-color .15s,background .15s,color .15s}
-.thumb img{width:100%;height:auto;aspect-ratio:576/450;object-fit:cover}
+.tpair{display:grid;grid-template-columns:1fr 1fr;gap:2px;aspect-ratio:8/5;background:var(--steel)}
+.tpair .crop{height:100%}
 .thumb:hover{border-color:var(--ink)}
 .thumb[aria-pressed="true"]{background:var(--ink);color:var(--pane);border-color:var(--ink)}
 .res-go{align-self:flex-start;display:inline-flex;align-items:center;gap:16px;min-height:58px;padding:0 22px;background:var(--violet);color:#fff;border:0;border-radius:3px;font-weight:600;letter-spacing:.03em;font-variation-settings:"wdth" 112;transition:background .2s}
@@ -494,12 +497,12 @@ footer a:hover{color:var(--plat)}
   <section class="sec lit-pane results" id="results" aria-labelledby="results-h">
     <div class="wrap res">
       <div class="stage-frame">
-        <div class="ba stage" id="stage" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png">
-          <div class="after" role="img" aria-label="After"></div>
-          <div class="before" role="img" aria-label="Before"></div>
+        <div class="ba stage" id="stage">
+          <div class="layer after crop" role="img" aria-label="After: Dark brunette to dimensional balayage"><img alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-1-6.-pxbee-minitools-enhance-20251023172542.jpg" fetchpriority="low"></div>
+          <div class="layer before crop" role="img" aria-label="Before: Dark brunette to dimensional balayage"><img alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-2-5.-pxbee-minitools-enhance-20251023172503.jpg" fetchpriority="low"></div>
           <span class="tag tb">Before</span><span class="tag ta">After</span>
           <div class="squeegee" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></i></div>
-          <input type="range" min="0" max="100" value="50" id="stageRange" aria-label="Before and after: Brown to bronde balayage. Slide to compare.">
+          <input type="range" min="0" max="100" value="50" id="stageRange" aria-label="Before and after: Dark brunette to dimensional balayage. Slide to compare.">
         </div>
       </div>
       <div class="res-side">
@@ -508,15 +511,14 @@ footer a:hover{color:var(--plat)}
           <p>Real Rokstar clients, photographed in the salon before and after their appointment. Drag the handle to wipe from one to the other.</p>
         </div>
         <div class="res-now" aria-live="polite">
-          <h3 id="resTitle">Brown to bronde balayage</h3>
-          <p id="resNote">One-tone brown lifted into soft, lived-in bronde with movement through the lengths.</p>
+          <h3 id="resTitle">Dark brunette to dimensional balayage</h3>
+          <p id="resNote">Flat, near-black lengths opened up with hand-painted balayage and soft, beachy movement.</p>
         </div>
         <div class="thumbs" role="group" aria-label="Choose a transformation">
-          <button class="thumb" type="button" aria-pressed="true" data-i="0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png" alt="" width="576" height="450"><span>Brown to bronde balayage</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-i="1"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-4.png" alt="" width="576" height="450"><span>Brown to blended blonde</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-i="2"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-4-2.png" alt="" width="576" height="450"><span>Long blonde to a bright blonde bob</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-i="3"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-5.png" alt="" width="576" height="450"><span>Golden to bright blonde</span></button>
-          <button class="thumb" type="button" aria-pressed="false" data-i="4"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-4-1.png" alt="" width="576" height="450"><span>Mousy blonde to lilac-tipped blonde</span></button>
+          <button class="thumb" type="button" aria-pressed="true" data-i="0"><span class="tpair" aria-hidden="true"><span class="crop" data-side="b"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-2-5.-pxbee-minitools-enhance-20251023172503.jpg"></span><span class="crop" data-side="a"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-1-6.-pxbee-minitools-enhance-20251023172542.jpg"></span></span><span class="tl">Dark brunette to dimensional balayage</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-i="1"><span class="tpair" aria-hidden="true"><span class="crop" data-side="b"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2.-pxbee-minitools-enhance-20251023113314.jpg"></span><span class="crop" data-side="a"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2.-pxbee-minitools-enhance-20251023113314.jpg"></span></span><span class="tl">Brown to bronde waves</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-i="2"><span class="tpair" aria-hidden="true"><span class="crop" data-side="b"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2-5.-pxbee-minitools-enhance-20251023172655.jpg"></span><span class="crop" data-side="a"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2-5.-pxbee-minitools-enhance-20251023172655.jpg"></span></span><span class="tl">Golden to creamy blonde</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-i="3"><span class="tpair" aria-hidden="true"><span class="crop" data-side="b"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-3-5.-pxbee-minitools-enhance-20251023172833.jpg"></span><span class="crop" data-side="a"><img loading="lazy" alt="" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-3-5.-pxbee-minitools-enhance-20251023172833.jpg"></span></span><span class="tl">Natural blonde to pink ribbons</span></button>
         </div>
         <button class="res-go" type="button" id="resGo" data-cat="colour"><span id="resGoLabel">Book a balayage like this</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
@@ -905,23 +907,40 @@ footer a:hover{color:var(--plat)}
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){b.textContent='Code: '+t})}else{b.textContent='Code: '+t}
   })});
 
-  /* before / after stage */
-  var RES=[["https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png","Brown to bronde balayage","One-tone brown lifted into soft, lived-in bronde with movement through the lengths.","colour","Book a balayage like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-4.png","Brown to blended blonde","Dark, flat lengths taken to a bright, blended blonde that grows out softly.","colour","Book a colour like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-4-2.png","Long blonde to a bright blonde bob","A big chop and a brighter, cleaner blonde in one visit.","blonde","Book a blonde like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-5.png","Golden to bright blonde","Warm, golden blonde refined into a brighter, creamier tone.","blonde","Book a blonde like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-4-1.png","Mousy blonde to lilac-tipped blonde","A lifted blonde with a playful hit of lilac on the ends.","colour","Book a colour like this"]];
-  var stage=$('#stage'), sr=$('#stageRange'), touched=false;
+  /* before / after stage: each side is cropped from its source and fitted to the pane */
+  var RES=[[["https://rokstar.com.au/wp-content/uploads/2025/10/image-2-5.-pxbee-minitools-enhance-20251023172503.jpg", 664, 912, 0, 664], ["https://rokstar.com.au/wp-content/uploads/2025/10/image-1-6.-pxbee-minitools-enhance-20251023172542.jpg", 640, 912, 0, 640], "Dark brunette to dimensional balayage", "Flat, near-black lengths opened up with hand-painted balayage and soft, beachy movement.", "colour", "Book a balayage like this"], [["https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2.-pxbee-minitools-enhance-20251023113314.jpg", 1112, 664, 0, 512], ["https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2.-pxbee-minitools-enhance-20251023113314.jpg", 1112, 664, 520, 1112], "Brown to bronde waves", "One-tone brown lifted into a soft, lived-in bronde with warmth through the lengths.", "colour", "Book a colour like this"], [["https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2-5.-pxbee-minitools-enhance-20251023172655.jpg", 1112, 664, 0, 516], ["https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-2-5.-pxbee-minitools-enhance-20251023172655.jpg", 1112, 664, 525, 1112], "Golden to creamy blonde", "Brassy, golden lengths refined into a brighter, creamier blonde.", "blonde", "Book a blonde like this"], [["https://rokstar.com.au/wp-content/uploads/2025/10/image-3-5.-pxbee-minitools-enhance-20251023172833.jpg", 752, 696, 0, 345], ["https://rokstar.com.au/wp-content/uploads/2025/10/image-3-5.-pxbee-minitools-enhance-20251023172833.jpg", 752, 696, 354, 752], "Natural blonde to pink ribbons", "A brighter blonde base with hand-placed ribbons of pink through the ends.", "colour", "Book a colour like this"]];
+  var fit=function(box,side){
+    var img=box.querySelector('img'); if(!img||!side)return;
+    var bw=box.clientWidth, bh=box.clientHeight; if(!bw||!bh)return;
+    var W=side[1],H=side[2],x0=side[3],cw=side[4]-side[3];
+    var k=Math.max(bw/cw,bh/H);
+    img.style.objectFit='fill';
+    img.style.width=(W*k)+'px'; img.style.height=(H*k)+'px';
+    img.style.left=(-(x0*k)-(cw*k-bw)/2)+'px'; img.style.top=(-(H*k-bh)/2)+'px';
+    var show=function(){img.classList.add('placed')};
+    if(img.complete&&img.naturalWidth)show();else img.addEventListener('load',show,{once:true});
+  };
+  var stage=$('#stage'), sr=$('#stageRange'), touched=false, cur=0;
+  var sb=$('.before',stage), sa=$('.after',stage);
   var setX=function(v){stage.style.setProperty('--x',v+'%')};
+  var fitAll=function(){
+    fit(sb,RES[cur][0]); fit(sa,RES[cur][1]);
+    $$('.thumb').forEach(function(t){var r=RES[+t.dataset.i];fit($('[data-side="b"]',t),r[0]);fit($('[data-side="a"]',t),r[1])});
+  };
   var load=function(i){
-    var it=RES[i], u='url("'+it[0]+'")';
-    $('.after',stage).style.backgroundImage=u;$('.before',stage).style.backgroundImage=u;
-    $('.after',stage).setAttribute('aria-label','After: '+it[1]);$('.before',stage).setAttribute('aria-label','Before: '+it[1]);
-    sr.setAttribute('aria-label','Before and after: '+it[1]+'. Slide to compare.');
+    cur=i; var it=RES[i];
+    [[sb,it[0],'Before: '],[sa,it[1],'After: ']].forEach(function(x){var img=$('img',x[0]);if(img.getAttribute('src')!==x[1][0]){img.classList.remove('placed');img.src=x[1][0]}x[0].setAttribute('aria-label',x[2]+it[2])});
+    sr.setAttribute('aria-label','Before and after: '+it[2]+'. Slide to compare.');
     sr.value=50;setX(50);
-    $('#resTitle').textContent=it[1];$('#resNote').textContent=it[2];
-    $('#resGo').dataset.cat=it[3];$('#resGoLabel').textContent=it[4];
+    $('#resTitle').textContent=it[2];$('#resNote').textContent=it[3];
+    $('#resGo').dataset.cat=it[4];$('#resGoLabel').textContent=it[5];
     $$('.thumb').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.i===i))});
+    fitAll();
   };
   sr.addEventListener('input',function(){touched=true;setX(sr.value)});
   $$('.thumb').forEach(function(b){b.addEventListener('click',function(){load(+b.dataset.i)})});
   $('#resGo').addEventListener('click',function(){var c=this.dataset.cat;selectTab(c);$('#book').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});setTimeout(function(){var t=$('#t-'+c);if(t)t.focus({preventScroll:true})},500)});
+  if('ResizeObserver' in window){var ro=new ResizeObserver(function(){fitAll()});ro.observe(stage);$$('.tpair').forEach(function(t){ro.observe(t)})}else{window.addEventListener('resize',fitAll)}
   load(0);
   /* one-time sweep so visitors see the pane can be wiped */
   if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
