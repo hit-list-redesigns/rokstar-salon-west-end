@@ -1,0 +1,879 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rokstar Salon · Award-winning hair salon, West End Brisbane</title>
+<meta name="description" content="Four-time AHIA Queensland Salon of the Year. Colour, balayage, platinum blondes, cuts, Nanoplasty smoothing and extensions in The Glass Factory, 57 Vulture St, West End. Book online.">
+<meta name="theme-color" content="#101212">
+<link rel="icon" href="https://rokstar.com.au/wp-content/uploads/2025/11/Favicon-150x150.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://rokstar.com.au">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..700&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="https://rokstar.com.au/wp-content/uploads/2026/05/Image_7.jpeg">
+<style>
+:root{
+  --steel:#101212;
+  --steel-2:#191c1c;
+  --steel-3:#252929;
+  --steel-line:#343939;
+  --pane:#f2f3f1;
+  --pane-2:#e5e8e5;
+  --pane-line:#cdd2cf;
+  --ink:#121414;
+  --ink-2:#464c4b;
+  --plat:#ebe9e4;
+  --plat-2:#aeb3b0;
+  --violet:#56468a;
+  --violet-deep:#45386f;
+  --violet-lit:#bcaeea;
+  --open:#9fd3b0;
+  --mull:12px;
+  --gut:clamp(16px,4vw,48px);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --f-sign:"Jost",system-ui,sans-serif;
+  --f:"Archivo",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px;scrollbar-color:#5d6362 var(--steel)}
+body{margin:0;background:var(--steel);color:var(--plat);font-family:var(--f);font-size:1rem;line-height:1.6;font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+::selection{background:var(--violet);color:#fff}
+::-webkit-scrollbar{width:12px;height:10px}
+::-webkit-scrollbar-track{background:var(--steel)}
+::-webkit-scrollbar-thumb{background:#4a504f;border:3px solid var(--steel);border-radius:8px}
+::-webkit-scrollbar-thumb:hover{background:#6b7270}
+img{display:block;max-width:100%}
+a{color:inherit;text-underline-offset:.22em;text-decoration-thickness:1px}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--violet-lit);outline-offset:3px;border-radius:2px}
+.pane :focus-visible,.lit-pane :focus-visible{outline-color:var(--violet)}
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--pane);color:var(--ink);padding:10px 16px;border-radius:2px;text-decoration:none;font-weight:600}
+.skip:focus{top:12px}
+.wide{font-variation-settings:"wdth" 118}
+.num{font-variant-numeric:tabular-nums lining-nums}
+svg.i{width:1.15em;height:1.15em;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Fascia ---------- */
+.fascia{position:sticky;top:0;z-index:40;background:var(--steel);border-bottom:1px solid #000}
+.fascia-in{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:76px;padding:0 var(--gut)}
+.mark{display:inline-flex;flex-direction:column;align-items:center;text-decoration:none;color:var(--plat);line-height:1}
+.mark b{font-family:var(--f-sign);font-weight:300;font-size:30px;letter-spacing:.075em;margin-right:-.075em}
+.mark i{font-style:normal;font-family:var(--f-sign);font-weight:400;font-size:11px;letter-spacing:.5em;margin:6px -.5em 0 0;color:var(--plat-2)}
+.nav{display:flex;gap:clamp(16px,2vw,32px);font-size:.84rem;letter-spacing:.06em;text-transform:uppercase;font-variation-settings:"wdth" 112}
+.nav a{text-decoration:none;color:var(--plat-2);padding:8px 0;transition:color .2s}
+.nav a:hover{color:var(--plat)}
+.fascia-r{display:flex;justify-content:flex-end;align-items:center;gap:18px}
+.tel{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--plat-2);font-size:.92rem}
+.tel:hover{color:var(--plat)}
+.btn-book{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 20px;background:var(--violet-lit);color:#16121f;text-decoration:none;font-weight:600;font-size:.88rem;letter-spacing:.05em;text-transform:uppercase;font-variation-settings:"wdth" 112;border:1px solid var(--violet-lit);border-radius:2px;transition:background .2s,color .2s}
+.btn-book:hover{background:#cdc2f1}
+.btn-book:active{background:var(--steel);color:var(--violet-lit)}
+.menu-btn{display:none;background:none;border:0;padding:10px;margin-left:-10px;align-items:center;gap:8px;color:var(--plat-2);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase}
+.menu-btn span{display:block;width:20px;height:1.5px;background:currentColor;box-shadow:0 6px 0 currentColor;margin-bottom:6px}
+.drawer{display:none}
+
+/* ---------- Window (hero) ---------- */
+.window{padding:var(--mull);background:var(--steel);display:grid;gap:var(--mull);grid-template-columns:minmax(0,1fr) minmax(0,1.12fr) minmax(0,.78fr);grid-template-rows:1fr 1fr;grid-template-areas:"door tall s1" "door tall s2";height:clamp(620px,calc(100svh - 76px),940px)}
+.door{grid-area:door}
+.p-tall{grid-area:tall}.p-s1{grid-area:s1}.p-s2{grid-area:s2}
+.glass{position:relative;overflow:hidden;background:var(--steel-2)}
+.glass img{width:100%;height:100%;object-fit:cover}
+.p-s1 img{transform:scale(1.12);transform-origin:50% 100%}
+.w5 img{transform:scale(1.14);transform-origin:40% 55%}
+.glass::after{content:"";position:absolute;inset:0;background:#0b0d0d;opacity:0;pointer-events:none}
+.glass::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(60% 40% at 50% 0%,rgba(255,250,232,.16),transparent 70%);opacity:.9}
+.glass figcaption{position:absolute;left:14px;bottom:12px;z-index:2;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(10,12,12,.72);padding:5px 9px;border-radius:2px;font-variation-settings:"wdth" 112}
+.door{background:var(--pane);color:var(--ink);display:flex;flex-direction:column;padding:clamp(24px,3vw,44px);position:relative}
+.sign{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-variation-settings:"wdth" 112;color:var(--ink-2);border:1px solid var(--pane-line);padding:7px 12px;border-radius:2px}
+.sign .dot{width:8px;height:8px;border-radius:50%;background:#8b918f}
+.sign.is-open .dot{background:#2f8a52}
+.sign strong{color:var(--ink);font-weight:600}
+.door h1{font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(2.4rem,3.9vw,4.25rem);line-height:1.02;letter-spacing:-.025em;margin:auto 0 0;padding-top:28px;text-wrap:balance;max-width:12ch}
+.door .lede{margin:18px 0 0;font-size:clamp(1rem,1.15vw,1.12rem);color:var(--ink-2);max-width:40ch;text-wrap:pretty}
+.door .lede strong{color:var(--ink);font-weight:600}
+.chooser{margin:0;padding-top:clamp(28px,3.4vh,44px)}
+.chooser .legend{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-variation-settings:"wdth" 112;color:var(--ink-2);margin:0 0 12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{appearance:none;border:1px solid var(--pane-line);background:transparent;color:var(--ink);min-height:44px;padding:0 14px;border-radius:2px;font-size:.92rem;transition:background .15s,color .15s,border-color .15s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--pane);border-color:var(--ink)}
+.pushbar{position:relative;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:18px;min-height:60px;padding:0 22px;background:var(--violet);color:#fff;text-decoration:none;font-weight:600;letter-spacing:.04em;font-variation-settings:"wdth" 112;border-radius:3px;box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 8px 18px -10px rgba(0,0,0,.45);transition:background .2s,transform .12s}
+.pushbar::before,.pushbar::after{content:"";position:absolute;top:50%;width:6px;height:26px;margin-top:-13px;background:#2a2f2e;border-radius:2px}
+.pushbar::before{left:-9px}.pushbar::after{right:-9px}
+.pushbar:hover{background:var(--violet-deep)}
+.pushbar:active{transform:translateX(3px);background:var(--ink)}
+.pushbar .lbl{display:flex;flex-direction:column;line-height:1.2}
+.pushbar small{font-weight:400;font-size:.78rem;opacity:.85;letter-spacing:.02em;font-variation-settings:"wdth" 100}
+.pushbar svg{width:22px;height:22px}
+.door .alt{margin:12px 0 0;font-size:.88rem;color:var(--ink-2)}
+.door .alt a{color:var(--ink);font-weight:600}
+
+/* lights-on moment */
+@media (prefers-reduced-motion:no-preference){
+  .js .glass::after{opacity:.72;transition:opacity 1.1s var(--ease)}
+  .js .glass img{filter:saturate(.55) brightness(.8);transition:filter 1.3s var(--ease)}
+  .js .glass::before{opacity:0;transition:opacity .9s var(--ease)}
+  .js .door{background:#dfe2df;transition:background 1s var(--ease)}
+  .js.lit .glass::after{opacity:0}
+  .js.lit .glass img{filter:none}
+  .js.lit .glass::before{opacity:.9}
+  .js.lit .door{background:var(--pane)}
+  .js.lit .p-tall::after,.js.lit .p-tall img,.js.lit .p-tall::before{transition-delay:.2s}
+  .js.lit .p-s1::after,.js.lit .p-s1 img,.js.lit .p-s1::before{transition-delay:.42s}
+  .js.lit .p-s2::after,.js.lit .p-s2 img,.js.lit .p-s2::before{transition-delay:.62s}
+}
+
+/* ---------- Transom (awards) ---------- */
+.transom{border-top:1px solid #000;border-bottom:1px solid #000;padding:22px var(--gut);text-align:center}
+.transom ul{list-style:none;padding:0;margin:0 auto;max-width:1200px;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 0;font-size:clamp(.95rem,1.15vw,1.08rem);letter-spacing:.02em;font-variation-settings:"wdth" 118;font-weight:300;color:var(--plat-2);line-height:1.9;text-wrap:balance}
+.transom b{color:var(--plat);font-weight:400}
+.transom li{white-space:nowrap}
+.transom li+li::before{content:"";display:inline-block;width:5px;height:5px;border:1px solid #6c7371;transform:rotate(45deg);margin:0 16px 3px}
+
+/* ---------- Sections ---------- */
+.sec{padding:clamp(72px,9vw,128px) var(--gut)}
+.sec-head{max-width:1280px;margin:0 auto clamp(32px,4vw,52px);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px 64px;align-items:end}
+h2{font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(2.1rem,4vw,3.6rem);line-height:1.04;letter-spacing:-.025em;margin:0;text-wrap:balance}
+.sec-head p{margin:0;color:var(--plat-2);max-width:48ch;font-size:1.02rem}
+.lit-pane .sec-head p{color:var(--ink-2)}
+.wrap{max-width:1280px;margin:0 auto}
+
+/* ---------- Work ---------- */
+.work-grid{display:grid;gap:var(--mull);background:var(--steel);padding:var(--mull);grid-template-columns:repeat(12,minmax(0,1fr))}
+.work-grid .glass{aspect-ratio:auto}
+.w1{grid-column:span 4;aspect-ratio:4/5}.w2{grid-column:span 4;aspect-ratio:4/5}.w3{grid-column:span 4;aspect-ratio:4/5}
+.w4{grid-column:span 5;aspect-ratio:auto;height:clamp(280px,32vw,460px)}.w5{grid-column:span 7;aspect-ratio:auto;height:clamp(280px,32vw,460px)}
+.ba-title{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:clamp(56px,7vw,96px) 0 22px;flex-wrap:wrap}
+.ba-title h3{margin:0;font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(1.6rem,2.4vw,2.2rem);letter-spacing:-.02em;line-height:1.1}
+.ba-title p{margin:0;color:var(--plat-2);font-size:.95rem}
+.ba-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:var(--mull);background:var(--steel);padding:var(--mull);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}
+.ba{position:relative;aspect-ratio:288/450;scroll-snap-align:start;overflow:hidden;background:var(--steel-2);--x:50%;touch-action:pan-y}
+.ba .after,.ba .before{position:absolute;inset:0;background-size:200% 100%;background-repeat:no-repeat}
+.ba .after{background-position:100% 0}
+.ba .before{background-position:0 0;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
+.ba .squeegee{position:absolute;top:0;bottom:0;left:var(--x);width:0;pointer-events:none}
+.ba .squeegee::before{content:"";position:absolute;top:0;bottom:0;left:-3px;width:6px;background:#0d0f0f;border-left:1px solid rgba(255,255,255,.35);border-right:1px solid rgba(255,255,255,.35)}
+.ba .squeegee::after{content:"";position:absolute;top:50%;left:-15px;width:30px;height:46px;margin-top:-23px;background:var(--steel-3);border:1px solid #5b6160;border-radius:3px;box-shadow:0 6px 14px -6px rgba(0,0,0,.8)}
+.ba .squeegee i{position:absolute;top:50%;left:-7px;z-index:1;margin-top:-8px;width:14px;height:16px;border-left:2px solid var(--plat-2);border-right:2px solid var(--plat-2)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:2}
+.ba:has(input:focus-visible){outline:2px solid var(--violet-lit);outline-offset:3px}
+.ba .tag{position:absolute;top:10px;z-index:1;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(10,12,12,.78);color:#fff;padding:4px 8px;border-radius:2px;font-variation-settings:"wdth" 112}
+.ba .tb{left:10px}.ba .ta{right:10px}
+.ig{display:inline-flex;align-items:center;gap:10px;margin-top:22px;color:var(--plat);text-decoration:none;font-size:.95rem;border-bottom:1px solid #4a504f;padding-bottom:4px}
+.ig:hover{border-color:var(--plat)}
+
+/* ---------- Menu board + booking ---------- */
+.lit-pane{background:var(--pane);color:var(--ink)}
+.board-frame{background:var(--steel);padding:var(--mull)}
+.board{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:var(--mull);background:var(--steel)}
+.board-main{background:var(--pane);color:var(--ink);min-width:0}
+.tabs{display:flex;overflow-x:auto;border-bottom:1px solid var(--pane-line);scrollbar-width:none;background:var(--pane-2)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{appearance:none;flex:1 0 auto;border:0;border-right:1px solid var(--pane-line);background:transparent;color:var(--ink-2);padding:0 20px;min-height:56px;font-size:.84rem;letter-spacing:.06em;text-transform:uppercase;font-variation-settings:"wdth" 112;white-space:nowrap}
+.tab:hover{color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--pane)}
+.panel{padding:clamp(20px,3vw,40px)}
+.panel[hidden]{display:none}
+.no-js .panel[hidden]{display:block}
+.panel-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 32px;align-items:baseline;margin-bottom:22px}
+.panel-intro h3{margin:0;font-weight:400;font-variation-settings:"wdth" 116;font-size:1.55rem;letter-spacing:-.015em}
+.panel-intro p{margin:0;grid-column:1/-1;color:var(--ink-2);max-width:66ch;font-size:.97rem}
+.panel-intro .who{font-size:.82rem;color:var(--ink-2);grid-column:auto}
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.rows li{border-bottom:1px solid var(--pane-line)}
+.pick{display:grid;grid-template-columns:22px minmax(0,1fr) auto;align-items:center;gap:14px;width:100%;min-height:58px;padding:10px 4px;background:none;border:0;text-align:left;color:var(--ink);transition:background .12s}
+.pick:hover{background:var(--pane-2)}
+.pick .rad{width:18px;height:18px;border:1.5px solid #7d8482;border-radius:50%;position:relative}
+.pick[aria-pressed="true"]{background:var(--ink);color:var(--pane)}
+.pick[aria-pressed="true"] .rad{border-color:var(--pane)}
+.pick[aria-pressed="true"] .rad::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--violet-lit)}
+.pick .nm{font-size:1rem}
+.pick .nm small{display:block;font-size:.8rem;color:var(--ink-2);margin-top:2px}
+.pick[aria-pressed="true"] .nm small{color:#c5cbc8}
+.pick .pr{font-variant-numeric:tabular-nums;font-size:1rem;white-space:nowrap}
+.pick .pr em{font-style:normal;font-size:.76rem;color:var(--ink-2);margin-right:6px;letter-spacing:.04em;text-transform:uppercase}
+.pick[aria-pressed="true"] .pr em{color:#c5cbc8}
+.new{display:inline-block;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid currentColor;padding:1px 6px;margin-right:8px;border-radius:2px;vertical-align:2px;font-variation-settings:"wdth" 112}
+/* length grid */
+.lg{margin-top:28px}
+.lg table{width:100%;border-collapse:collapse;table-layout:fixed}
+.lg caption{text-align:left;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);padding-bottom:10px;font-variation-settings:"wdth" 112}
+.lg th,.lg td{padding:0;border-bottom:1px solid var(--pane-line);text-align:left;font-weight:400}
+.lg thead th{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);padding:8px 6px;border-bottom:1px solid var(--ink);font-variation-settings:"wdth" 112}
+.lg thead th:first-child{width:38%}
+.lg tbody th{padding:12px 6px 12px 4px;font-size:.98rem}
+.lg td button{width:100%;min-height:52px;background:none;border:0;border-left:1px solid var(--pane-line);font-variant-numeric:tabular-nums;font-size:1rem;color:var(--ink);transition:background .12s}
+.lg td button:hover{background:var(--pane-2)}
+.lg td button[aria-pressed="true"]{background:var(--ink);color:var(--pane)}
+.lg .la{display:none}
+.lg td.na{border-left:1px solid var(--pane-line);text-align:center;color:#8b918f}
+.note{margin:22px 0 0;font-size:.88rem;color:var(--ink-2);max-width:72ch}
+/* ticket (summary) */
+.ticket{background:var(--steel-2);color:var(--plat);padding:clamp(22px,2.4vw,32px);display:flex;flex-direction:column;gap:22px;align-self:start;position:sticky;top:92px}
+.ticket h3{margin:0;font-weight:300;font-variation-settings:"wdth" 116;font-size:1.5rem;letter-spacing:-.015em}
+.step{border-top:1px solid var(--steel-line);padding-top:16px}
+.step-k{display:flex;justify-content:space-between;gap:12px;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--plat-2);font-variation-settings:"wdth" 112;margin-bottom:8px}
+.sel{font-size:1.05rem;line-height:1.35;min-height:1.4em}
+.sel.empty{color:var(--plat-2)}
+.sel .price{display:block;font-variant-numeric:tabular-nums;color:var(--plat);margin-top:4px;font-size:1.25rem;font-weight:300}
+.stylists{display:flex;flex-wrap:wrap;gap:6px}
+.sty{appearance:none;border:1px solid var(--steel-line);background:transparent;color:var(--plat);min-height:40px;padding:0 12px;border-radius:2px;font-size:.88rem}
+.sty:hover{border-color:var(--plat-2)}
+.sty[aria-pressed="true"]{background:var(--plat);color:var(--steel);border-color:var(--plat)}
+.toggle{display:flex;align-items:center;gap:12px;font-size:.95rem;cursor:pointer}
+.toggle input{appearance:none;width:42px;height:24px;border-radius:12px;background:var(--steel-3);border:1px solid var(--steel-line);position:relative;flex:none;cursor:pointer;transition:background .2s}
+.toggle input::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--plat-2);transition:transform .2s var(--ease),background .2s}
+.toggle input:checked{background:var(--violet)}
+.toggle input:checked::after{transform:translateX(18px);background:#fff}
+.newbox{margin-top:12px;font-size:.9rem;color:var(--plat-2);display:grid;gap:10px}
+.newbox[hidden]{display:none}
+.code{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px dashed #5d6362;padding:8px 8px 8px 12px;border-radius:2px;color:var(--plat)}
+.code b{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:500;letter-spacing:.04em}
+.copy{border:1px solid var(--steel-line);background:var(--steel-3);color:var(--plat);min-height:36px;padding:0 12px;border-radius:2px;font-size:.8rem}
+.copy:hover{border-color:var(--plat-2)}
+.go{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;padding:0 20px;background:var(--violet-lit);color:#16121f;text-decoration:none;font-weight:600;letter-spacing:.04em;font-variation-settings:"wdth" 112;border-radius:3px;transition:background .2s}
+.go:hover{background:#cdc2f1}
+.go:active{background:var(--plat)}
+.fine{margin:0;font-size:.82rem;color:var(--plat-2)}
+.fine a{color:var(--plat)}
+
+/* ---------- Directory ---------- */
+.directory{background:#0b0c0c;border:var(--mull) solid var(--steel-2);padding:clamp(20px,3vw,40px)}
+.dir-head{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1.7fr) 150px;gap:20px;padding:0 0 12px;border-bottom:1px solid #3a3f3e;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#8d9391;font-variation-settings:"wdth" 118}
+.dir{list-style:none;margin:0;padding:0}
+.dir li{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1.7fr) 150px;gap:20px;align-items:center;padding:18px 0;border-bottom:1px solid #222626}
+.dir .n{font-family:var(--f-sign);font-weight:300;font-size:clamp(1.4rem,2vw,1.8rem);letter-spacing:.12em;text-transform:uppercase;color:#f4f2ec}
+.dir .r{font-size:.84rem;letter-spacing:.06em;text-transform:uppercase;color:var(--plat-2);font-variation-settings:"wdth" 112}
+.dir .k{font-size:.95rem;color:#cdd1ce}
+.dir .k em{font-style:normal;color:#f4f2ec}
+.dir li>:last-child{justify-self:end}
+.withbtn{appearance:none;background:none;border:1px solid #3a3f3e;color:var(--plat);min-height:40px;padding:0 14px;border-radius:2px;font-size:.82rem;white-space:nowrap}
+.withbtn:hover{border-color:var(--violet-lit);color:var(--violet-lit)}
+.dir .muted{color:#8d9391;font-size:.82rem}
+
+/* ---------- First visit ---------- */
+.first{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--mull);background:var(--steel);padding:var(--mull)}
+.offer{background:var(--pane);color:var(--ink);padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:18px}
+.offer h3{margin:0;font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(2rem,3.6vw,3.2rem);line-height:1.04;letter-spacing:-.025em}
+.offer p{margin:0;max-width:44ch;color:var(--ink-2)}
+.offer .code{border-color:#8a908e;color:var(--ink);max-width:360px}
+.offer .copy{background:var(--pane-2);border-color:var(--pane-line);color:var(--ink)}
+.offer .copy:hover{border-color:var(--ink)}
+.offer-go{display:inline-flex;align-self:flex-start;align-items:center;justify-content:space-between;gap:16px;max-width:100%;min-height:56px;padding:0 20px;margin-top:10px;background:var(--violet);color:#fff;border:0;border-radius:3px;font-weight:600;letter-spacing:.03em;font-variation-settings:"wdth" 112;text-align:left;transition:background .2s}
+.offer-go:hover{background:var(--violet-deep)}
+.offer-go:active{background:var(--ink)}
+.offer .fine{color:var(--ink-2)}
+.policies{background:var(--pane);color:var(--ink);padding:clamp(28px,4vw,56px)}
+.policies h3{margin:0 0 18px;font-weight:400;font-variation-settings:"wdth" 116;font-size:1.5rem;letter-spacing:-.015em}
+.policies dl{margin:0;display:grid;gap:0}
+.policies dl div{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:16px;padding:14px 0;border-top:1px solid var(--pane-line)}
+.policies dt{font-weight:600;font-size:.95rem}
+.policies dd{margin:0;color:var(--ink-2);font-size:.95rem}
+
+/* ---------- Reviews (placeholders) ---------- */
+.reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--mull);background:var(--steel);padding:var(--mull)}
+.review{background:var(--steel-2);padding:clamp(22px,2.6vw,34px);display:flex;flex-direction:column;gap:16px;min-height:240px}
+.ph{align-self:flex-start;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:#16121f;background:#e7d48a;padding:4px 8px;border-radius:2px;font-weight:600;font-variation-settings:"wdth" 112}
+.review blockquote{margin:0;font-size:1.12rem;line-height:1.5;color:var(--plat);font-weight:300;font-variation-settings:"wdth" 106}
+.review cite{margin-top:auto;font-style:normal;font-size:.85rem;color:var(--plat-2)}
+
+/* ---------- Visit ---------- */
+.visit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--mull);background:var(--steel);padding:var(--mull)}
+.shop{background:var(--steel-2);display:flex;flex-direction:column}
+.shop img{width:100%;height:auto;aspect-ratio:476/263;object-fit:cover}
+.shop figcaption{font-size:1rem;color:var(--plat);line-height:1.55;padding:clamp(20px,2.6vw,32px);margin-top:auto}
+.shop figcaption span{color:var(--plat-2);font-size:.92rem}
+.vinyl{background:#0c0e0e;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:20px;border:1px solid #2a2f2e}
+.vinyl h3{margin:0;font-family:var(--f-sign);font-weight:300;letter-spacing:.32em;text-transform:uppercase;font-size:.95rem;color:#f4f2ec;text-align:center}
+.hours{list-style:none;margin:0;padding:0;font-family:var(--f-sign);font-weight:300;letter-spacing:.08em;color:#e6e4de}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:9px 12px;border-bottom:1px solid #1f2323;font-variant-numeric:tabular-nums}
+.hours li span:first-child{text-transform:uppercase;font-size:.9rem;letter-spacing:.18em}
+.hours li.closed{color:#8d9391}
+.hours li.today{background:var(--plat);color:var(--steel);font-weight:400;border-radius:2px}
+.hours li.today span:first-child::after{content:" · today";text-transform:none;letter-spacing:.02em;font-size:.8rem}
+.status{font-size:.9rem;color:var(--plat-2);text-align:center;margin:0}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--mull);background:var(--steel);padding:0 var(--mull) var(--mull)}
+.fact{background:var(--steel-2);padding:clamp(22px,2.6vw,32px);display:flex;flex-direction:column;gap:10px}
+.fact h3{margin:0;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:500;color:var(--plat-2);font-variation-settings:"wdth" 116}
+.fact p{margin:0;color:var(--plat)}
+.fact .sm{font-size:.92rem;color:#c9cdca}
+.fact a.link{display:inline-flex;align-items:center;gap:8px;color:var(--plat);text-decoration:underline;text-decoration-color:#5d6362;min-height:32px}
+.fact a.link:hover{text-decoration-color:var(--plat)}
+
+/* ---------- Close ---------- */
+.close{position:relative;padding:clamp(96px,12vw,170px) var(--gut);text-align:center;overflow:hidden;background:radial-gradient(60% 55% at 50% 42%,#1f2323,var(--steel) 70%)}
+.close h2{font-size:clamp(2.4rem,5.6vw,5.2rem);max-width:16ch;margin:0 auto}
+.close p{margin:22px auto 0;color:var(--plat-2);max-width:46ch;font-size:1.05rem}
+.close .ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:36px}
+.close .btn-book{min-height:58px;padding:0 28px;font-size:1rem;text-transform:none;letter-spacing:.02em}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;min-height:58px;padding:0 24px;border:1px solid #4a504f;color:var(--plat);text-decoration:none;border-radius:2px;font-size:.95rem}
+.btn-ghost:hover{border-color:var(--plat)}
+
+footer{border-top:1px solid #000;padding:40px var(--gut) 48px;display:flex;flex-wrap:wrap;gap:24px 40px;align-items:center;justify-content:space-between;color:var(--plat-2);font-size:.88rem}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 24px}
+footer a{color:var(--plat-2);text-decoration:none}
+footer a:hover{color:var(--plat)}
+
+/* ---------- Mobile bar ---------- */
+.mbar{display:none}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .board{grid-template-columns:minmax(0,1fr)}
+  .ticket{position:static}
+  .dir-head{display:none}
+  .dir li{grid-template-columns:minmax(0,1fr) auto;gap:6px 16px}
+  .dir-head{grid-template-columns:minmax(0,1fr) auto}
+  .dir .n{grid-column:1}.dir .withbtn,.dir .muted{grid-column:2;grid-row:1}
+  .dir .r,.dir .k{grid-column:1/-1}
+}
+@media (max-width:1023px){
+  .nav,.tel{display:none}
+  .menu-btn{display:inline-flex}
+  .fascia-in{grid-template-columns:auto 1fr auto}
+  .fascia-in .mark{justify-self:center}
+  .drawer{display:block;position:absolute;left:0;right:0;top:100%;background:var(--steel);border-bottom:1px solid #000;padding:8px var(--gut) 20px}
+  .drawer[hidden]{display:none}
+  .drawer a{display:flex;align-items:center;min-height:52px;border-bottom:1px solid var(--steel-3);text-decoration:none;font-size:1.05rem;color:var(--plat)}
+  .window{height:auto;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto;grid-template-areas:"tall s1 s2" "door door door"}
+  .window .glass{height:clamp(240px,38vw,380px)}
+  .door{min-height:0}
+  .door h1{margin-top:0;max-width:16ch}
+  .sec-head{grid-template-columns:minmax(0,1fr)}
+  .work-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .w1,.w2{grid-column:span 3}.w3{grid-column:span 6;aspect-ratio:16/10}.w4{grid-column:span 6;height:auto;aspect-ratio:16/10}.w5{grid-column:span 6;height:auto;aspect-ratio:4/3}
+  .first,.visit{grid-template-columns:minmax(0,1fr)}
+  .reviews{grid-template-columns:minmax(0,1fr)}
+  .review{min-height:0}
+  .facts{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:700px){
+  :root{--mull:8px}
+  html{scroll-padding-top:68px}
+  .fascia-in{height:62px}
+  .mark b{font-size:24px}
+  .mark i{font-size:11px;letter-spacing:.42em;margin:4px -.42em 0 0}
+  .fascia-r .btn-book{display:none}
+  .callicon{display:inline-flex!important}
+  .window{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);grid-template-areas:"tall s1" "door door"}
+  .window .glass{height:clamp(170px,46vw,240px)}
+  .p-s2{display:none}
+  .glass figcaption{left:8px;bottom:8px;font-size:.72rem;padding:4px 7px;letter-spacing:.05em}
+  .door{padding:20px 18px 22px}
+  .door h1{font-size:clamp(2.05rem,9.4vw,2.6rem);padding-top:16px}
+  .door .lede{margin-top:10px;font-size:.98rem}
+  .chooser{padding-top:22px}
+  .chooser .legend{margin-bottom:10px}
+  .chips{gap:6px}
+  .chip{min-height:42px;padding:0 12px;font-size:.88rem}
+  .pushbar{margin-top:14px;margin-left:6px;margin-right:6px}
+  .transom{text-align:left}
+  .transom ul{flex-direction:column;align-items:flex-start;gap:0}
+  .transom li{white-space:normal;padding:9px 0;border-bottom:1px solid var(--steel-3);width:100%;line-height:1.4}
+  .transom li:last-child{border-bottom:0}
+  .transom li+li::before{display:none}
+  .w1,.w2{grid-column:span 3}
+  .ba-row{grid-auto-columns:68%}
+  .panel-intro{grid-template-columns:minmax(0,1fr)}
+  .panel-intro .who{grid-column:1}
+  .lg thead th:first-child{width:34%}
+  .lg .lf{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .lg .la{display:inline}
+  .lg thead th{text-align:center}
+  .lg thead th:first-child{text-align:left}
+  .lg tbody th{font-size:.9rem}
+  .lg td button{font-size:.9rem;min-height:48px}
+  .policies dl div{grid-template-columns:minmax(0,1fr);gap:4px}
+  footer{padding-bottom:110px}
+  .mbar{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:var(--steel);border-top:1px solid #000;transform:translateY(110%);transition:transform .35s var(--ease)}
+  .mbar.on{transform:none}
+  .mbar a{display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;border-radius:3px;text-decoration:none;font-weight:600;letter-spacing:.03em;font-variation-settings:"wdth" 112}
+  .mbar .mb{background:var(--violet-lit);color:#16121f;padding:0 16px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+  .mbar .mb{justify-content:flex-start}
+  .mbar .mbl{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+  .mbar .mbl>span,.mbar .mbl small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mbar .mbl small{font-weight:400;font-size:.78rem;letter-spacing:.01em;font-variation-settings:"wdth" 100}
+  .mbar .mc{border:1px solid #4a504f;color:var(--plat);padding:0 18px}
+}
+.callicon{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-right:-10px;color:var(--plat-2)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+}
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js');document.body.classList.add('js');document.documentElement.classList.add('js');</script>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="fascia" id="top">
+  <div class="fascia-in">
+    <nav class="nav" aria-label="Primary">
+      <a href="#work">The work</a>
+      <a href="#book">Menu &amp; prices</a>
+      <a href="#team">Team</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer"><span aria-hidden="true"></span>Menu</button>
+    <a class="mark" href="#top" aria-label="Rokstar Salon, back to top"><b>ROKSTAR</b><i>SALON</i></a>
+    <div class="fascia-r">
+      <a class="tel" href="tel:+61448058354"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>0448 058 354</a>
+      <a class="callicon" href="tel:+61448058354" aria-label="Call Rokstar on 0448 058 354"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+      <a class="btn-book" href="#book">Book</a>
+    </div>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="Mobile" hidden>
+    <a href="#work">The work</a>
+    <a href="#book">Menu &amp; prices</a>
+    <a href="#team">Team</a>
+    <a href="#first">First visit</a>
+    <a href="#visit">Hours &amp; location</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="window" aria-label="Welcome">
+    <div class="door">
+      <p class="sign" id="sign" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="signText">Open Tue to Fri · <strong>book online anytime</strong></span></p>
+      <h1>Hair worth crossing the river for.</h1>
+      <p class="lede">Award-winning colour, blondes, cuts and smoothing in West End. <strong>Four-time AHIA Queensland Salon of the Year.</strong></p>
+      <div class="chooser" role="group" aria-labelledby="chooseLbl">
+        <p class="legend" id="chooseLbl">What are you booking?</p>
+        <div class="chips" id="heroChips">
+          <button class="chip" type="button" aria-pressed="false" data-cat="colour">Colour &amp; balayage</button>
+          <button class="chip" type="button" aria-pressed="false" data-cat="blonde">Blonde &amp; platinum</button>
+          <button class="chip" type="button" aria-pressed="false" data-cat="cuts">Cut &amp; blow-dry</button>
+          <button class="chip" type="button" aria-pressed="false" data-cat="smooth">Smoothing</button>
+          <button class="chip" type="button" aria-pressed="false" data-cat="treat">Treatment</button>
+          <button class="chip" type="button" aria-pressed="false" data-cat="ext">Extensions</button>
+        </div>
+      </div>
+      <a class="pushbar" id="pushbar" href="#book"><span class="lbl"><span id="pushLabel">Book an appointment</span><small>See prices, pick a stylist</small></span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <p class="alt">Rather talk it through? <a href="tel:+61448058354">Call 0448 058 354</a></p>
+    </div>
+    <figure class="glass p-tall" style="margin:0"><img src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_7.jpeg" alt="Client with long, face-framing honey blonde layers, styled in the salon" width="1440" height="1920" fetchpriority="high" style="object-position:50% 30%"><figcaption>Honey blonde layers</figcaption></figure>
+    <figure class="glass p-s1" style="margin:0"><img src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_2.jpeg" alt="Client with a sleek, glossy chin-length dark bob" width="1284" height="1477" style="object-position:50% 70%"><figcaption>Glossy dark bob</figcaption></figure>
+    <figure class="glass p-s2" style="margin:0"><img src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_1.jpeg" alt="Bright platinum blonde textured bob, seen from the side" width="1284" height="1563" style="object-position:50% 40%"><figcaption>Bright blonde bob</figcaption></figure>
+  </section>
+
+  <div class="transom" role="note" aria-label="Awards">
+    <ul><li><b>4× Winner, AHIA Queensland Salon of the Year</b></li><li>Winner, AHIA Salon Team of the Year</li><li>Finalist, L’Oréal Colour Trophy (National)</li><li>Finalist, AHIA State Salon of the Year</li><li>Finalist, HOTSHOTS Team 2020</li></ul>
+  </div>
+
+  <section class="sec" id="work" aria-labelledby="work-h">
+    <div class="sec-head">
+      <h2 id="work-h">Look through the glass.</h2>
+      <p>Recent work from the Rokstar floor at Vulture Street: lived-in blondes, bright platinums, rich brunettes and cuts that grow out well.</p>
+    </div>
+    <div class="wrap">
+      <div class="work-grid">
+        <figure class="glass w1" style="margin:0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_3.jpeg" alt="Client with long blonde shag layers and a soft fringe" width="1284" height="1379" style="object-position:50% 30%"><figcaption>Blonde shag, soft fringe</figcaption></figure>
+        <figure class="glass w2" style="margin:0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_4.jpeg" alt="Long, straight blended blonde with a darker root" width="1284" height="1568" style="object-position:50% 40%"><figcaption>Blended blonde, soft root</figcaption></figure>
+        <figure class="glass w3" style="margin:0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_6.jpeg" alt="Long ashy blonde layers with face-framing pieces" width="1284" height="1645" style="object-position:50% 35%"><figcaption>Ash blonde, long layers</figcaption></figure>
+        <figure class="glass w4" style="margin:0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/Frame-1000004214.png" alt="Rich copper waves, photographed in the salon" width="376" height="323" style="object-position:50% 40%"><figcaption>Copper waves</figcaption></figure>
+        <figure class="glass w5" style="margin:0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_5.jpeg" alt="Close-up of bright, creamy blonde waves" width="1284" height="1259" style="object-position:50% 45%"><figcaption>Creamy blonde waves</figcaption></figure>
+      </div>
+
+      <div class="ba-title">
+        <h3>Before and after</h3>
+        <p>Drag the squeegee across each pane.</p>
+      </div>
+      <div class="ba-row" id="baRow">
+        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png"><div class="after" role="img" aria-label="After: long bronde balayage waves"></div><div class="before" role="img" aria-label="Before: flat, one-tone brown lengths"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: brown to bronde balayage"></div>
+        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/image-4.png"><div class="after" role="img" aria-label="After: blended blonde waves"></div><div class="before" role="img" aria-label="Before: brown lengths"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: brown to blended blonde"></div>
+        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/Frame-1000004238.png"><div class="after" role="img" aria-label="After: dimensional balayage waves"></div><div class="before" role="img" aria-label="Before: dark, straight hair"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: dark hair to balayage"></div>
+        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/image-4-2.png"><div class="after" role="img" aria-label="After: bright blonde textured bob"></div><div class="before" role="img" aria-label="Before: longer, warmer blonde"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: warm blonde to bright blonde bob"></div>
+        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/image-5.png"><div class="after" role="img" aria-label="After: bright, even blonde waves"></div><div class="before" role="img" aria-label="Before: brassy, uneven blonde"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: brassy to bright blonde"></div>
+      </div>
+      <a class="ig" href="https://www.instagram.com/rokstarsalon/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>More every day on Instagram, @rokstarsalon</a>
+    </div>
+  </section>
+
+  <section class="sec lit-pane" id="book" aria-labelledby="book-h">
+    <div class="sec-head">
+      <h2 id="book-h">The menu, priced honestly.</h2>
+      <p>Choose a service, pick a stylist if you have one in mind, then lock in your exact time on our secure booking system. Prices are “from” and are confirmed once we see your hair: length, density and goals all count.</p>
+    </div>
+    <div class="wrap board-frame">
+      <div class="board">
+        <div class="board-main">
+          <div class="tabs" role="tablist" aria-label="Service categories">
+            <button class="tab" role="tab" id="t-colour" aria-controls="p-colour" aria-selected="true" data-cat="colour">Colour</button>
+            <button class="tab" role="tab" id="t-blonde" aria-controls="p-blonde" aria-selected="false" tabindex="-1" data-cat="blonde">Blonde</button>
+            <button class="tab" role="tab" id="t-cuts" aria-controls="p-cuts" aria-selected="false" tabindex="-1" data-cat="cuts">Cuts &amp; styling</button>
+            <button class="tab" role="tab" id="t-smooth" aria-controls="p-smooth" aria-selected="false" tabindex="-1" data-cat="smooth">Smoothing</button>
+            <button class="tab" role="tab" id="t-treat" aria-controls="p-treat" aria-selected="false" tabindex="-1" data-cat="treat">Treatments</button>
+            <button class="tab" role="tab" id="t-ext" aria-controls="p-ext" aria-selected="false" tabindex="-1" data-cat="ext">Extensions</button>
+          </div>
+
+          <div class="panel" role="tabpanel" id="p-colour" aria-labelledby="t-colour">
+            <div class="panel-intro"><h3>Balayage, foils &amp; colour</h3><span class="who">Ask for Carlos, Tash or Bella</span><p>Seamless, sun-kissed balayage, precise foils and glossy all-over colour, designed to flatter you and grow out beautifully.</p></div>
+            <ul class="rows">
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Custom Balayage (new client)" data-price="from $685"><span class="rad"></span><span class="nm"><span class="new">New client</span>Custom Balayage</span><span class="pr"><em>from</em>$685</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Beautiful Brunette (new client)" data-price="from $675"><span class="rad"></span><span class="nm"><span class="new">New client</span>Beautiful Brunette</span><span class="pr"><em>from</em>$675</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Balayage Refresh" data-price="from $505"><span class="rad"></span><span class="nm">Balayage Refresh<small>Existing clients, 8–10 weeks’ regrowth</small></span><span class="pr"><em>from</em>$505</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Full Head of Foils" data-price="from $505"><span class="rad"></span><span class="nm">Full Head of Foils</span><span class="pr"><em>from</em>$505</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="3/4 Head Foils" data-price="from $510"><span class="rad"></span><span class="nm">¾ Head Foils</span><span class="pr"><em>from</em>$510</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Partline Foils" data-price="from $440"><span class="rad"></span><span class="nm">Partline Foils</span><span class="pr"><em>from</em>$440</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="1/2 Head Foils" data-price="from $438"><span class="rad"></span><span class="nm">½ Head Foils</span><span class="pr"><em>from</em>$438</span></button></li>
+            </ul>
+            <div class="lg">
+              <table>
+                <caption>From, by length · tap a price to choose it</caption>
+                <thead><tr><th scope="col">Service</th><th scope="col"><span class="lf">Short</span><span class="la" aria-hidden="true">S</span></th><th scope="col"><span class="lf">Medium</span><span class="la" aria-hidden="true">M</span></th><th scope="col"><span class="lf">Long</span><span class="la" aria-hidden="true">L</span></th><th scope="col"><span class="lf">X-long</span><span class="la" aria-hidden="true">XL</span></th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Global colour</th><td class="na" aria-label="Not offered">–</td><td><button type="button" aria-pressed="false" data-svc="Global Colour, Medium (8–10 weeks)" data-price="from $247">$247</button></td><td><button type="button" aria-pressed="false" data-svc="Global Colour, Long" data-price="from $280">$280</button></td><td><button type="button" aria-pressed="false" data-svc="Global Colour, Extra Long" data-price="from $330">$330</button></td></tr>
+                  <tr><th scope="row">Toner &amp; blow-dry</th><td><button type="button" aria-pressed="false" data-svc="Toner &amp; Blowdry, Short" data-price="from $130">$130</button></td><td><button type="button" aria-pressed="false" data-svc="Toner &amp; Blowdry, Medium" data-price="from $155">$155</button></td><td><button type="button" aria-pressed="false" data-svc="Toner &amp; Blowdry, Long" data-price="from $175">$175</button></td><td><button type="button" aria-pressed="false" data-svc="Toner &amp; Blowdry, Extra Long" data-price="from $225">$225</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="rows" style="margin-top:22px">
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Global Regrowth (4–8 weeks)" data-price="from $216"><span class="rad"></span><span class="nm">Global Regrowth<small>4–8 weeks’ regrowth</small></span><span class="pr"><em>from</em>$216</span></button></li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" id="p-blonde" aria-labelledby="t-blonde" hidden>
+            <div class="panel-intro"><h3>Blonde &amp; platinum</h3><span class="who">Ask for Tash or Bella</span><p>Bold, luminous statement blondes, lifted with care for the health of your hair. Going from dark to blonde can take more than one visit; we’ll plan it with you.</p></div>
+            <ul class="rows">
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="First-time Platinum Blonde (new client)" data-price="from $665"><span class="rad"></span><span class="nm"><span class="new">New client</span>First-time Platinum Blonde</span><span class="pr"><em>from</em>$665</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Ultimate Blonde Transformation (new client)" data-price="from $575"><span class="rad"></span><span class="nm"><span class="new">New client</span>Ultimate Blonde Transformation</span><span class="pr"><em>from</em>$575</span></button></li>
+            </ul>
+            <div class="lg">
+              <table>
+                <caption>Platinum maintenance, from, by length</caption>
+                <thead><tr><th scope="col">Service</th><th scope="col"><span class="lf">Short</span><span class="la" aria-hidden="true">S</span></th><th scope="col"><span class="lf">Medium</span><span class="la" aria-hidden="true">M</span></th><th scope="col"><span class="lf">Long</span><span class="la" aria-hidden="true">L</span></th><th scope="col"><span class="lf">X-long</span><span class="la" aria-hidden="true">XL</span></th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Platinum blonde</th><td><button type="button" aria-pressed="false" data-svc="Platinum Blonde, Short" data-price="from $537">$537</button></td><td><button type="button" aria-pressed="false" data-svc="Platinum Blonde, Medium" data-price="from $597">$597</button></td><td><button type="button" aria-pressed="false" data-svc="Platinum Blonde, Long" data-price="from $617">$617</button></td><td class="na" aria-label="Not listed">–</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel" role="tabpanel" id="p-cuts" aria-labelledby="t-cuts" hidden>
+            <div class="panel-intro"><h3>Cuts, blow-dries &amp; styling</h3><span class="who">Pixies &amp; bobs: Evie · Curls: Carlos</span><p>Precision cuts and the signature Rokstar blow-dry, from a sharp pixie to soft long layers, shags, wolf cuts and curls.</p></div>
+            <ul class="rows">
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Haircut" data-price="from $135"><span class="rad"></span><span class="nm">Haircut</span><span class="pr"><em>from</em>$135</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Big Style Change" data-price="from $140"><span class="rad"></span><span class="nm">Big Style Change</span><span class="pr"><em>from</em>$140</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Curly Haircut" data-price="from $145"><span class="rad"></span><span class="nm">Curly Haircut</span><span class="pr"><em>from</em>$145</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="New Client @ Rokstar Haircut" data-price="from $185"><span class="rad"></span><span class="nm"><span class="new">New client</span>Rokstar Haircut</span><span class="pr"><em>from</em>$185</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="For the Love of Curls (new client)" data-price="$275"><span class="rad"></span><span class="nm"><span class="new">New client</span>For the Love of Curls</span><span class="pr">$275</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Fringe Trim" data-price="$52"><span class="rad"></span><span class="nm">Fringe Trim</span><span class="pr">$52</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Emerging Stylist Wash &amp; Blowout" data-price="$86"><span class="rad"></span><span class="nm">Wash &amp; Blowout<small>With an emerging stylist</small></span><span class="pr">$86</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Senior Stylist Down Styling" data-price="from $100"><span class="rad"></span><span class="nm">Down Styling<small>Senior stylist</small></span><span class="pr"><em>from</em>$100</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Master Stylist Down Styling" data-price="$135"><span class="rad"></span><span class="nm">Down Styling<small>Master stylist</small></span><span class="pr">$135</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Principal Stylist Down Styling" data-price="$145"><span class="rad"></span><span class="nm">Down Styling<small>Principal stylist</small></span><span class="pr">$145</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Event Styling" data-price="from $190"><span class="rad"></span><span class="nm">Event Styling<small>Weddings, formals, big nights</small></span><span class="pr"><em>from</em>$190</span></button></li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" id="p-smooth" aria-labelledby="t-smooth" hidden>
+            <div class="panel-intro"><h3>Nanoplasty &amp; hair botox</h3><span class="who">Ask for Katie</span><p>Our answer to Brisbane humidity. Nanoplasty is formaldehyde-free, vegan and cruelty-free, keeps hair straight and frizz-free for up to six months, and is safe for pregnant and allergy-prone clients.</p></div>
+            <div class="lg" style="margin-top:0">
+              <table>
+                <caption>From, by length · tap a price to choose it</caption>
+                <thead><tr><th scope="col">Service</th><th scope="col"><span class="lf">Short</span><span class="la" aria-hidden="true">S</span></th><th scope="col"><span class="lf">Medium</span><span class="la" aria-hidden="true">M</span></th><th scope="col"><span class="lf">Long</span><span class="la" aria-hidden="true">L</span></th><th scope="col"><span class="lf">X-long</span><span class="la" aria-hidden="true">XL</span></th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Nanoplasty</th><td><button type="button" aria-pressed="false" data-svc="Nanoplasty, Short" data-price="$505">$505</button></td><td><button type="button" aria-pressed="false" data-svc="Nanoplasty, Medium" data-price="$655">$655</button></td><td><button type="button" aria-pressed="false" data-svc="Nanoplasty, Long" data-price="$770">$770</button></td><td><button type="button" aria-pressed="false" data-svc="Nanoplasty, Extra Long" data-price="$865">$865</button></td></tr>
+                  <tr><th scope="row">Hair botox</th><td><button type="button" aria-pressed="false" data-svc="Hair Botox, Short" data-price="$202">$202</button></td><td><button type="button" aria-pressed="false" data-svc="Hair Botox, Medium" data-price="$253">$253</button></td><td><button type="button" aria-pressed="false" data-svc="Hair Botox, Long" data-price="$304">$304</button></td><td><button type="button" aria-pressed="false" data-svc="Hair Botox, Extra Long" data-price="$405">$405</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <ul class="rows" style="margin-top:22px">
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Consultation: Smoothing or Nanoplasty" data-price="$50"><span class="rad"></span><span class="nm">Smoothing consultation<small>Not sure which suits your hair? Start here.</small></span><span class="pr">$50</span></button></li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" id="p-treat" aria-labelledby="t-treat" hidden>
+            <div class="panel-intro"><h3>Treatments &amp; gloss</h3><span class="who">Add one to any colour</span><p>Restore strength, softness and shine, or give your scalp some attention. Most can be added to a colour or cut on the same visit.</p></div>
+            <ul class="rows">
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Pure Luxury Scalp &amp; Hair Treatment" data-price="$125"><span class="rad"></span><span class="nm">Pure Luxury Scalp &amp; Hair Treatment</span><span class="pr">$125</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Gloss Treatment" data-price="$100"><span class="rad"></span><span class="nm">Gloss Treatment</span><span class="pr">$100</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="System Pro Premium Treatment" data-price="$80"><span class="rad"></span><span class="nm">System Professional Premium Treatment</span><span class="pr">$80</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="System Pro Advanced Treatment" data-price="$50"><span class="rad"></span><span class="nm">System Professional Advanced Treatment</span><span class="pr">$50</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="R+Co Korean Beauty Treatment" data-price="$50"><span class="rad"></span><span class="nm">R+Co Korean Beauty Treatment</span><span class="pr">$50</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Scalp Scrub" data-price="$50"><span class="rad"></span><span class="nm">Scalp Scrub</span><span class="pr">$50</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Wellaplex Treatment" data-price="$40"><span class="rad"></span><span class="nm">Wellaplex Treatment</span><span class="pr">$40</span></button></li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" id="p-ext" aria-labelledby="t-ext" hidden>
+            <div class="panel-intro"><h3>Extensions</h3><span class="who">Ask for Evie or Sara</span><p>Keratin bond, tape and weft extensions, colour-matched and blended to your own hair for length, volume and thickness. A full head of keratin bonds averages $1,200 to $2,500 including hair, depending on length and volume. Every extension journey starts with a consultation and a quote.</p></div>
+            <ul class="rows">
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Consultation: Hair Extensions" data-price="$50"><span class="rad"></span><span class="nm">Extensions consultation<small>Keratin bond, tape or weft: we’ll match, quote and plan</small></span><span class="pr">$50</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Consultation: Big Colour Change" data-price="$50"><span class="rad"></span><span class="nm">Big colour change consultation</span><span class="pr">$50</span></button></li>
+              <li><button class="pick" type="button" aria-pressed="false" data-svc="Consultation: Colour Correction" data-price="$50"><span class="rad"></span><span class="nm">Colour correction consultation</span><span class="pr">$50</span></button></li>
+            </ul>
+          </div>
+          <p class="note panel" style="padding-top:0;margin-top:0">All prices from Rokstar’s live booking menu and subject to change. Your final price is confirmed by your stylist.</p>
+        </div>
+
+        <aside class="ticket" aria-labelledby="ticket-h">
+          <h3 id="ticket-h">Your appointment</h3>
+          <div class="step">
+            <div class="step-k"><span>1 · Service</span><button type="button" class="copy" id="clearSvc" hidden>Change</button></div>
+            <p class="sel empty" id="selSvc" aria-live="polite">Choose a service from the menu.</p>
+          </div>
+          <div class="step">
+            <div class="step-k"><span>2 · Stylist</span><span>optional</span></div>
+            <div class="stylists" id="stylists" role="group" aria-label="Preferred stylist">
+              <button class="sty" type="button" aria-pressed="true" data-sty="">Anyone</button>
+              <button class="sty" type="button" aria-pressed="false" data-sty="Evie">Evie</button>
+              <button class="sty" type="button" aria-pressed="false" data-sty="Tash">Tash</button>
+              <button class="sty" type="button" aria-pressed="false" data-sty="Carlos">Carlos</button>
+              <button class="sty" type="button" aria-pressed="false" data-sty="Sara">Sara</button>
+              <button class="sty" type="button" aria-pressed="false" data-sty="Katie">Katie</button>
+              <button class="sty" type="button" aria-pressed="false" data-sty="Bella">Bella</button>
+              <button class="sty" type="button" aria-pressed="false" data-sty="Ava-Grace">Ava-Grace</button>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-k"><span>3 · First visit?</span></div>
+            <label class="toggle"><input type="checkbox" id="isNew"> I’m new to Rokstar</label>
+            <div class="newbox" id="newbox" hidden>
+              <div class="code"><span>Code <b>NewRokstar50</b></span><button class="copy" type="button" data-copy="NewRokstar50">Copy</button></div>
+              <span>$50 off a colour &amp; cut for new clients. A 50% deposit secures your first visit and comes off your bill.</span>
+            </div>
+          </div>
+          <a class="go" id="goBook" href="https://www.phorest.com/salon/rokstar/book/service-selection" target="_blank" rel="noopener"><span id="goLabel">Choose your time</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <p class="fine">Opens Rokstar’s secure booking (Phorest) in a new tab, where you pick the exact day and time. Questions? <a href="tel:+61448058354">0448 058 354</a></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="team" aria-labelledby="team-h">
+    <div class="sec-head">
+      <h2 id="team-h">Who’s in the building.</h2>
+      <p>Award-winning, constantly training, and happy to be requested by name. Tap a stylist to book with them.</p>
+    </div>
+    <div class="wrap directory">
+      <div class="dir-head" aria-hidden="true"><span>Name</span><span>Role</span><span>Known for</span><span></span></div>
+      <ul class="dir">
+        <li><span class="n">Evie</span><span class="r">Principal Stylist &amp; Salon Manager</span><span class="k">Pixies, precision bobs, seamless brunettes and extension transformations. <em>AHIA Salon Stylist of the Year; Bronze, L’Oréal Colour Trophy.</em></span><button class="withbtn" type="button" data-with="Evie">Book Evie</button></li>
+        <li><span class="n">Tash</span><span class="r">Master Colourist &amp; Stylist</span><span class="k">The salon’s blonde queen: precision foils, luminous blondes, crisp bobs.</span><button class="withbtn" type="button" data-with="Tash">Book Tash</button></li>
+        <li><span class="n">Carlos</span><span class="r">Master Stylist</span><span class="k">Lived-in colour, soft balayage, shags, wolf cuts and curls. 15+ years’ international experience.</span><button class="withbtn" type="button" data-with="Carlos">Book Carlos</button></li>
+        <li><span class="n">Sara</span><span class="r">Master Stylist</span><span class="k">Long layers, soft bobs, big glossy blow-dries and every type of extension.</span><button class="withbtn" type="button" data-with="Sara">Book Sara</button></li>
+        <li><span class="n">Katie</span><span class="r">Smoothing &amp; Styling Specialist</span><span class="k">Our Nanoplasty expert and resident blow-dry queen.</span><button class="withbtn" type="button" data-with="Katie">Book Katie</button></li>
+        <li><span class="n">Bella</span><span class="r">Emerging Talent</span><span class="k">Bright, seamless blondes, scalp lightener and foils, long layers.</span><button class="withbtn" type="button" data-with="Bella">Book Bella</button></li>
+        <li><span class="n">Ava-Grace</span><span class="r">Emerging Talent</span><span class="k">Soft, glossy blow-dries, styling and colour on long hair.</span><button class="withbtn" type="button" data-with="Ava-Grace">Book Ava-Grace</button></li>
+        <li><span class="n">Grace</span><span class="r">Salon Host &amp; Content</span><span class="k">Keeps your visit seamless, and runs the Instagram.</span><span class="muted">Front desk</span></li>
+        <li><span class="n">Mobi</span><span class="r">Chief Happiness Officer</span><span class="k">Red-brown toy poodle. Supervises the floor, keeps you company while your colour processes.</span><span class="muted">Not bookable</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec lit-pane" id="first" aria-labelledby="first-h" style="padding-top:clamp(72px,9vw,128px)">
+    <div class="sec-head">
+      <h2 id="first-h">Your first visit, made easy.</h2>
+      <p>No surprises: here’s the offer, the deposit and the fine print before you book.</p>
+    </div>
+    <div class="wrap first">
+      <div class="offer">
+        <h3>$50 off your first colour &amp; cut.</h3>
+        <p>New to Rokstar? Book any colour together with a haircut and enter the code below when you book online.</p>
+        <div class="code"><span>Code <b>NewRokstar50</b></span><button class="copy" type="button" data-copy="NewRokstar50">Copy code</button></div>
+        <p class="fine">New clients only. Not valid on a standalone service.</p>
+        <button class="offer-go" type="button" id="offerGo"><span>Book a colour &amp; cut with NewRokstar50</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="policies">
+        <h3>Good to know</h3>
+        <dl>
+          <div><dt>Deposit</dt><dd>New clients pay a 50% deposit to secure the first appointment. It comes straight off your bill.</dd></div>
+          <div><dt>Changes</dt><dd>Give us at least 24 hours’ notice to cancel or move. Booked services can’t be cancelled on the day.</dd></div>
+          <div><dt>Reminders</dt><dd>We text you 48 hours before. Just reply Y or N.</dd></div>
+          <div><dt>Running late</dt><dd>Call us and we’ll do our best to fit you in or move your time.</dd></div>
+          <div><dt>Consultation</dt><dd>Every appointment starts with a complimentary consultation, and we’re happy to quote before we begin.</dd></div>
+          <div><dt>Big change?</dt><dd>For colour corrections, extensions, smoothing or a dramatic new look, you can also book a dedicated $50 consultation from the menu.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="reviews" aria-labelledby="rev-h">
+    <div class="sec-head">
+      <h2 id="rev-h">What clients say.</h2>
+      <p>These three panes are placeholders for real client reviews, to be replaced before launch.</p>
+    </div>
+    <div class="wrap reviews">
+      <figure class="review" style="margin:0"><span class="ph">Placeholder review</span><blockquote>[Real client review about a blonde or colour result goes here. One to three sentences.]</blockquote><cite>[Client first name] · [Suburb] · [Source, e.g. Google]</cite></figure>
+      <figure class="review" style="margin:0"><span class="ph">Placeholder review</span><blockquote>[Real client review about Nanoplasty or smoothing goes here.]</blockquote><cite>[Client first name] · [Suburb] · [Source]</cite></figure>
+      <figure class="review" style="margin:0"><span class="ph">Placeholder review</span><blockquote>[Real client review from a first-time visitor about the experience goes here.]</blockquote><cite>[Client first name] · [Suburb] · [Source]</cite></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h" style="padding-top:0">
+    <div class="sec-head">
+      <h2 id="visit-h">Find the shopfront.</h2>
+      <p>The Glass Factory, Shop 2/57 Vulture Street, West End. Look for the black steel windows and ROKSTAR above the door.</p>
+    </div>
+    <div class="wrap">
+      <div class="visit">
+        <figure class="shop" style="margin:0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/Frame-1000003986-2.png" alt="The Rokstar Salon shopfront: black steel-framed glass with the ROKSTAR sign above, salon lights on inside" width="476" height="263"><figcaption><strong>Shop 2, The Glass Factory</strong><br>57 Vulture St, West End QLD 4101<br><span>Black steel windows, ROKSTAR above the door.</span></figcaption></figure>
+        <div class="vinyl">
+          <h3>Opening hours</h3>
+          <ul class="hours" id="hours">
+            <li data-d="1" class="closed"><span>Mon</span><span>Closed</span></li>
+            <li data-d="2"><span>Tue</span><span>9:30am – 9pm</span></li>
+            <li data-d="3"><span>Wed</span><span>9am – 7pm</span></li>
+            <li data-d="4"><span>Thu</span><span>9:30am – 9pm</span></li>
+            <li data-d="5"><span>Fri</span><span>9am – 3pm</span></li>
+            <li data-d="6" class="closed"><span>Sat</span><span>Closed</span></li>
+            <li data-d="0" class="closed"><span>Sun</span><span>Closed</span></li>
+          </ul>
+          <p class="status" id="status">Online booking is open around the clock.</p>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="fact"><h3>Address</h3><p>Shop 2/57 Vulture St<br>West End QLD 4101</p><a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Rokstar+Salon+2%2F57+Vulture+St+West+End+QLD+4101" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Open in Google Maps</a></div>
+        <div class="fact"><h3>Parking</h3><p class="sm">Five guest spaces behind the building, subject to availability. Three-hour zones on Vulture St and side parking on Exeter and Cambridge Sts. Allow 15 minutes to park.</p></div>
+        <div class="fact"><h3>Contact</h3><p><a class="link" href="tel:+61448058354"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>0448 058 354</a><br><a class="link" href="mailto:info@rokstar.com.au"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m4 7 8 6 8-6"/></svg>info@rokstar.com.au</a></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" aria-labelledby="close-h">
+    <h2 id="close-h">The lights are on Tuesday to Friday.</h2>
+    <p>Book online any time, day or night, or call the salon. Your new hair is a few taps away.</p>
+    <div class="ctas">
+      <a class="btn-book" href="#book">Book your appointment</a>
+      <a class="btn-ghost" href="tel:+61448058354"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call 0448 058 354</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a class="mark" href="#top" aria-label="Rokstar Salon, back to top"><b style="font-size:22px">ROKSTAR</b><i>SALON</i></a>
+  <nav aria-label="Footer">
+    <a href="https://www.phorest.com/salon/rokstar" target="_blank" rel="noopener">Gift cards</a>
+    <a href="https://www.instagram.com/rokstarsalon/" target="_blank" rel="noopener">Instagram</a>
+    <a href="mailto:info@rokstar.com.au">info@rokstar.com.au</a>
+    <a href="https://rokstar.phorest.me/book/terms" target="_blank" rel="noopener">Booking terms</a>
+  </nav>
+  <span>© Rokstar Salon, West End, Brisbane</span>
+</footer>
+
+<div class="mbar" id="mbar">
+  <a class="mb" href="#book" id="mbBook"><span class="mbl"><span id="mbLabel">Book an appointment</span><small id="mbSub">Prices, stylists &amp; times</small></span></a>
+  <a class="mc" href="tel:+61448058354" aria-label="Call Rokstar on 0448 058 354"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Call</a>
+</div>
+
+<script>
+(function(){
+  var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  var BOOK_URL='https://www.phorest.com/salon/rokstar/book/service-selection';
+
+  /* lights on */
+  var lightsOn=function(){requestAnimationFrame(function(){document.body.classList.add('lit');document.documentElement.classList.add('lit')})};
+  if(document.readyState==='complete')setTimeout(lightsOn,150);else window.addEventListener('load',function(){setTimeout(lightsOn,150)});
+  setTimeout(lightsOn,2500);
+
+  /* open / closed (Brisbane time, no daylight saving) */
+  var HOURS={2:[570,1260],3:[540,1140],4:[570,1260],5:[540,900]};
+  var NAMES=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var fmt=function(m){var h=Math.floor(m/60),mm=m%60,ap=h>=12?'pm':'am';h=h%12||12;return h+(mm?':'+(mm<10?'0':'')+mm:'')+ap};
+  var now=new Date(Date.now()+(new Date().getTimezoneOffset()+600)*60000);
+  var d=now.getDay(), mins=now.getHours()*60+now.getMinutes();
+  var todayLi=$('#hours li[data-d="'+d+'"]'); if(todayLi)todayLi.classList.add('today');
+  var sign=$('#sign'), st=$('#signText'), status=$('#status'), h=HOURS[d];
+  if(h&&mins>=h[0]&&mins<h[1]){
+    sign.classList.add('is-open');
+    st.innerHTML='Open now · <strong>until '+fmt(h[1])+'</strong>';
+    status.textContent='Open now until '+fmt(h[1])+'. Online booking never closes.';
+  }else{
+    var nd=d,nm=mins,label='';
+    for(var i=0;i<8;i++){var hh=HOURS[nd];if(hh&&(i>0||nm<hh[0])){label=(i===0?'today':i===1?'tomorrow':NAMES[nd])+' '+fmt(hh[0]);break}nd=(nd+1)%7}
+    st.innerHTML='Closed · opens '+label+' · <strong>book online now</strong>';
+    status.textContent='Closed right now, opening '+label+'. Online booking never closes.';
+  }
+
+  /* drawer */
+  var mbtn=$('.menu-btn'), drawer=$('#drawer');
+  mbtn.addEventListener('click',function(){var o=mbtn.getAttribute('aria-expanded')==='true';mbtn.setAttribute('aria-expanded',String(!o));drawer.hidden=o});
+  $$('#drawer a').forEach(function(a){a.addEventListener('click',function(){drawer.hidden=true;mbtn.setAttribute('aria-expanded','false')})});
+
+  /* tabs */
+  var tabs=$$('.tab');
+  function selectTab(cat,focus){
+    tabs.forEach(function(t){var on=t.dataset.cat===cat;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;$('#'+t.getAttribute('aria-controls')).hidden=!on;if(on&&focus)t.focus();if(on)t.scrollIntoView({block:'nearest',inline:'nearest'})});
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t.dataset.cat)});
+    t.addEventListener('keydown',function(e){var k=e.key,n=null;if(k==='ArrowRight')n=tabs[(i+1)%tabs.length];if(k==='ArrowLeft')n=tabs[(i-1+tabs.length)%tabs.length];if(k==='Home')n=tabs[0];if(k==='End')n=tabs[tabs.length-1];if(n){e.preventDefault();selectTab(n.dataset.cat,true)}});
+  });
+
+  /* hero chooser */
+  var CATNAME={colour:'colour & balayage',blonde:'blonde & platinum',cuts:'a cut & blow-dry',smooth:'smoothing',treat:'a treatment',ext:'extensions'};
+  var chosenCat=null;
+  $$('#heroChips .chip').forEach(function(c){
+    c.addEventListener('click',function(){
+      var on=c.getAttribute('aria-pressed')!=='true';
+      $$('#heroChips .chip').forEach(function(x){x.setAttribute('aria-pressed','false')});
+      c.setAttribute('aria-pressed',String(on));
+      chosenCat=on?c.dataset.cat:null;
+      $('#pushLabel').textContent=chosenCat?'Book '+CATNAME[chosenCat]:'Book an appointment';
+      if(chosenCat)selectTab(chosenCat);
+    });
+  });
+  $('#pushbar').addEventListener('click',function(){if(chosenCat)selectTab(chosenCat)});
+
+  /* service selection */
+  var state={svc:null,price:null,sty:''};
+  var picks=$$('[data-svc]');
+  function render(){
+    var sel=$('#selSvc');
+    if(state.svc){sel.classList.remove('empty');sel.innerHTML='';sel.appendChild(document.createTextNode(state.svc));var p=document.createElement('span');p.className='price';p.textContent=state.price;sel.appendChild(p);$('#clearSvc').hidden=false}
+    else{sel.classList.add('empty');sel.textContent='Choose a service from the menu.';$('#clearSvc').hidden=true}
+    var lab=state.svc?'Choose your time'+(state.sty?' with '+state.sty:''):(state.sty?'Book with '+state.sty:'Choose your time');
+    $('#goLabel').textContent=lab;
+    $('#mbLabel').textContent=state.svc?'Choose your time':(state.sty?'Book with '+state.sty:'Book an appointment');
+    $('#mbSub').textContent=state.svc?state.svc+' · '+state.price:'Prices, stylists & times';
+    $('#mbBook').setAttribute('href',state.svc?BOOK_URL:'#book');
+    if(state.svc){$('#mbBook').setAttribute('target','_blank');$('#mbBook').setAttribute('rel','noopener')}else{$('#mbBook').removeAttribute('target')}
+  }
+  picks.forEach(function(p){
+    p.addEventListener('click',function(){
+      var on=p.getAttribute('aria-pressed')!=='true';
+      picks.forEach(function(x){x.setAttribute('aria-pressed','false')});
+      if(on){p.setAttribute('aria-pressed','true');state.svc=p.dataset.svc.replace(/&amp;/g,'&');state.price=/^from/.test(p.dataset.price)?p.dataset.price:'from '+p.dataset.price}else{state.svc=null;state.price=null}
+      render();
+      if(on&&window.matchMedia('(max-width:1100px)').matches===false){}
+    });
+  });
+  $('#clearSvc').addEventListener('click',function(){picks.forEach(function(x){x.setAttribute('aria-pressed','false')});state.svc=null;state.price=null;render();var t=$('.tab[aria-selected="true"]');if(t)t.focus()});
+  function setSty(name){$$('.sty').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.sty===name))});state.sty=name;render()}
+  $$('.sty').forEach(function(b){b.addEventListener('click',function(){setSty(b.dataset.sty)})});
+  $$('.withbtn').forEach(function(b){b.addEventListener('click',function(){setSty(b.dataset.with);$('#book').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});setTimeout(function(){var t=$('.tab[aria-selected="true"]');if(t)t.focus({preventScroll:true})},500)})});
+  $('#isNew').addEventListener('change',function(e){$('#newbox').hidden=!e.target.checked});
+  $('#offerGo').addEventListener('click',function(){var n=$('#isNew');n.checked=true;$('#newbox').hidden=false;selectTab('colour');$('#book').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});setTimeout(function(){var t=$('#t-colour');if(t)t.focus({preventScroll:true})},500)});
+
+  /* copy code */
+  $$('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+    var t=b.dataset.copy, orig=b.textContent;
+    var done=function(){b.textContent='Copied';setTimeout(function(){b.textContent=orig},1600)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){b.textContent='Code: '+t})}else{b.textContent='Code: '+t}
+  })});
+
+  /* before / after squeegee */
+  $$('.ba').forEach(function(ba){
+    var u='url("'+ba.dataset.img+'")';
+    $('.after',ba).style.backgroundImage=u;$('.before',ba).style.backgroundImage=u;
+    var r=$('input',ba);
+    var set=function(){ba.style.setProperty('--x',r.value+'%')};
+    r.addEventListener('input',set);set();
+  });
+
+  /* mobile sticky bar */
+  var mbar=$('#mbar'), push=$('#pushbar'), close=$('.close');
+  if('IntersectionObserver' in window){
+    var pushVisible=true, closeVisible=false;
+    var upd=function(){mbar.classList.toggle('on',!pushVisible&&!closeVisible)};
+    new IntersectionObserver(function(es){es.forEach(function(e){pushVisible=e.isIntersecting||e.boundingClientRect.top>0});upd()}).observe(push);
+    new IntersectionObserver(function(es){es.forEach(function(e){closeVisible=e.isIntersecting});upd()},{threshold:.3}).observe(close);
+  }else{mbar.classList.add('on')}
+  render();
+})();
+</script>
+</body>
+</html>
