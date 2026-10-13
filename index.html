@@ -145,22 +145,35 @@ h2{font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(2.1rem,4vw
 .work-grid .glass{aspect-ratio:auto}
 .w1{grid-column:span 4;aspect-ratio:4/5}.w2{grid-column:span 4;aspect-ratio:4/5}.w3{grid-column:span 4;aspect-ratio:4/5}
 .w4{grid-column:span 5;aspect-ratio:auto;height:clamp(280px,32vw,460px)}.w5{grid-column:span 7;aspect-ratio:auto;height:clamp(280px,32vw,460px)}
-.ba-title{display:flex;justify-content:space-between;align-items:end;gap:24px;margin:clamp(56px,7vw,96px) 0 22px;flex-wrap:wrap}
-.ba-title h3{margin:0;font-weight:300;font-variation-settings:"wdth" 116;font-size:clamp(1.6rem,2.4vw,2.2rem);letter-spacing:-.02em;line-height:1.1}
-.ba-title p{margin:0;color:var(--plat-2);font-size:.95rem}
-.ba-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:var(--mull);background:var(--steel);padding:var(--mull);overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain}
-.ba{position:relative;aspect-ratio:288/450;scroll-snap-align:start;overflow:hidden;background:var(--steel-2);--x:50%;touch-action:pan-y}
+.ba{position:relative;aspect-ratio:288/450;overflow:hidden;background:var(--steel-2);--x:50%;touch-action:pan-y}
 .ba .after,.ba .before{position:absolute;inset:0;background-size:200% 100%;background-repeat:no-repeat}
 .ba .after{background-position:100% 0}
 .ba .before{background-position:0 0;clip-path:inset(0 calc(100% - var(--x)) 0 0)}
 .ba .squeegee{position:absolute;top:0;bottom:0;left:var(--x);width:0;pointer-events:none}
 .ba .squeegee::before{content:"";position:absolute;top:0;bottom:0;left:-3px;width:6px;background:#0d0f0f;border-left:1px solid rgba(255,255,255,.35);border-right:1px solid rgba(255,255,255,.35)}
-.ba .squeegee::after{content:"";position:absolute;top:50%;left:-15px;width:30px;height:46px;margin-top:-23px;background:var(--steel-3);border:1px solid #5b6160;border-radius:3px;box-shadow:0 6px 14px -6px rgba(0,0,0,.8)}
-.ba .squeegee i{position:absolute;top:50%;left:-7px;z-index:1;margin-top:-8px;width:14px;height:16px;border-left:2px solid var(--plat-2);border-right:2px solid var(--plat-2)}
+.ba .squeegee i{position:absolute;top:50%;left:-24px;width:48px;height:64px;margin-top:-32px;display:flex;align-items:center;justify-content:center;background:var(--steel);border:1px solid #5b6160;border-radius:3px;box-shadow:0 8px 18px -8px rgba(0,0,0,.85);color:var(--plat)}
+.ba .squeegee svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .ba input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:2}
-.ba:has(input:focus-visible){outline:2px solid var(--violet-lit);outline-offset:3px}
-.ba .tag{position:absolute;top:10px;z-index:1;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(10,12,12,.78);color:#fff;padding:4px 8px;border-radius:2px;font-variation-settings:"wdth" 112}
-.ba .tb{left:10px}.ba .ta{right:10px}
+.ba:has(input:focus-visible){outline:2px solid var(--violet);outline-offset:4px}
+.ba .tag{position:absolute;top:14px;z-index:1;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(10,12,12,.82);color:#fff;padding:6px 10px;border-radius:2px;font-variation-settings:"wdth" 112;pointer-events:none}
+.ba .tb{left:14px}.ba .ta{right:14px}
+/* results stage */
+.res{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(32px,5vw,88px);align-items:center}
+.stage-frame{background:var(--steel);padding:var(--mull);width:clamp(300px,calc((100svh - 260px) * .64 + 24px),470px)}
+.res-head p{margin:18px 0 0;color:var(--ink-2);max-width:46ch;font-size:1.02rem}
+.res-now{border-top:1px solid var(--ink);padding-top:22px}
+.stage{width:100%}
+.res-side{display:flex;flex-direction:column;gap:28px;min-width:0}
+.res-now h3{margin:0;font-weight:400;font-variation-settings:"wdth" 116;font-size:clamp(1.35rem,2vw,1.75rem);line-height:1.15;letter-spacing:-.02em;text-wrap:balance}
+.res-now p{margin:12px 0 0;color:var(--ink-2);max-width:46ch}
+.thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:10px}
+.thumb{appearance:none;display:flex;flex-direction:column;gap:8px;padding:6px 6px 10px;background:transparent;border:1px solid var(--pane-line);border-radius:2px;color:var(--ink);text-align:left;font-size:.84rem;line-height:1.3;transition:border-color .15s,background .15s,color .15s}
+.thumb img{width:100%;height:auto;aspect-ratio:576/450;object-fit:cover}
+.thumb:hover{border-color:var(--ink)}
+.thumb[aria-pressed="true"]{background:var(--ink);color:var(--pane);border-color:var(--ink)}
+.res-go{align-self:flex-start;display:inline-flex;align-items:center;gap:16px;min-height:58px;padding:0 22px;background:var(--violet);color:#fff;border:0;border-radius:3px;font-weight:600;letter-spacing:.03em;font-variation-settings:"wdth" 112;transition:background .2s}
+.res-go:hover{background:var(--violet-deep)}
+.res-go:active{background:var(--ink)}
 .ig{display:inline-flex;align-items:center;gap:10px;margin-top:22px;color:var(--plat);text-decoration:none;font-size:.95rem;border-bottom:1px solid #4a504f;padding-bottom:4px}
 .ig:hover{border-color:var(--plat)}
 
@@ -345,6 +358,11 @@ footer a:hover{color:var(--plat)}
   .work-grid{grid-template-columns:repeat(6,minmax(0,1fr))}
   .w1,.w2{grid-column:span 3}.w3{grid-column:span 6;aspect-ratio:16/10}.w4{grid-column:span 6;height:auto;aspect-ratio:16/10}.w5{grid-column:span 6;height:auto;aspect-ratio:4/3}
   .first,.visit{grid-template-columns:minmax(0,1fr)}
+  .res{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+  .stage-frame{width:auto}
+  .thumbs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:8px;scrollbar-width:none;padding-bottom:4px}
+  .thumbs::-webkit-scrollbar{display:none}
+  .thumb{flex:0 0 140px;scroll-snap-align:start}
   .reviews{grid-template-columns:minmax(0,1fr)}
   .review{min-height:0}
   .facts{grid-template-columns:minmax(0,1fr)}
@@ -375,7 +393,17 @@ footer a:hover{color:var(--plat)}
   .transom li:last-child{border-bottom:0}
   .transom li+li::before{display:none}
   .w1,.w2{grid-column:span 3}
-  .ba-row{grid-auto-columns:68%}
+  .res{display:flex;flex-direction:column;align-items:stretch;gap:22px}
+  .thumbs{min-width:0}
+  .res-side{display:contents}
+  .res-head{order:1}.stage-frame{order:2}.res-now{order:3}.thumbs{order:4}.res-go{order:5}
+  .res-now{border-top:0;padding-top:0}
+  .stage-frame{margin:0 calc(var(--gut) * -1 + 4px)}
+  .res-side{gap:20px}
+  .thumbs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:8px;margin:0 calc(var(--gut) * -1);padding:0 var(--gut) 4px;scrollbar-width:none}
+  .thumbs::-webkit-scrollbar{display:none}
+  .thumb{flex:0 0 132px;scroll-snap-align:start}
+  .res-go{align-self:stretch;justify-content:space-between}
   .panel-intro{grid-template-columns:minmax(0,1fr)}
   .panel-intro .who{grid-column:1}
   .lg thead th:first-child{width:34%}
@@ -411,7 +439,7 @@ footer a:hover{color:var(--plat)}
 <header class="fascia" id="top">
   <div class="fascia-in">
     <nav class="nav" aria-label="Primary">
-      <a href="#work">The work</a>
+      <a href="#results">Results</a>
       <a href="#book">Menu &amp; prices</a>
       <a href="#team">Team</a>
       <a href="#visit">Visit</a>
@@ -425,6 +453,7 @@ footer a:hover{color:var(--plat)}
     </div>
   </div>
   <nav class="drawer" id="drawer" aria-label="Mobile" hidden>
+    <a href="#results">Before &amp; after</a>
     <a href="#work">The work</a>
     <a href="#book">Menu &amp; prices</a>
     <a href="#team">Team</a>
@@ -462,6 +491,38 @@ footer a:hover{color:var(--plat)}
     <ul><li><b>4× Winner, AHIA Queensland Salon of the Year</b></li><li>Winner, AHIA Salon Team of the Year</li><li>Finalist, L’Oréal Colour Trophy (National)</li><li>Finalist, AHIA State Salon of the Year</li><li>Finalist, HOTSHOTS Team 2020</li></ul>
   </div>
 
+  <section class="sec lit-pane results" id="results" aria-labelledby="results-h">
+    <div class="wrap res">
+      <div class="stage-frame">
+        <div class="ba stage" id="stage" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png">
+          <div class="after" role="img" aria-label="After"></div>
+          <div class="before" role="img" aria-label="Before"></div>
+          <span class="tag tb">Before</span><span class="tag ta">After</span>
+          <div class="squeegee" aria-hidden="true"><i><svg viewBox="0 0 24 24"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></svg></i></div>
+          <input type="range" min="0" max="100" value="50" id="stageRange" aria-label="Before and after: Brown to bronde balayage. Slide to compare.">
+        </div>
+      </div>
+      <div class="res-side">
+        <div class="res-head">
+          <h2 id="results-h">Walk in one way. Walk out another.</h2>
+          <p>Real Rokstar clients, photographed in the salon before and after their appointment. Drag the handle to wipe from one to the other.</p>
+        </div>
+        <div class="res-now" aria-live="polite">
+          <h3 id="resTitle">Brown to bronde balayage</h3>
+          <p id="resNote">One-tone brown lifted into soft, lived-in bronde with movement through the lengths.</p>
+        </div>
+        <div class="thumbs" role="group" aria-label="Choose a transformation">
+          <button class="thumb" type="button" aria-pressed="true" data-i="0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png" alt="" width="576" height="450"><span>Brown to bronde balayage</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-i="1"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-4.png" alt="" width="576" height="450"><span>Brown to blended blonde</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-i="2"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-4-2.png" alt="" width="576" height="450"><span>Long blonde to a bright blonde bob</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-i="3"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-5.png" alt="" width="576" height="450"><span>Golden to bright blonde</span></button>
+          <button class="thumb" type="button" aria-pressed="false" data-i="4"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2025/10/image-4-1.png" alt="" width="576" height="450"><span>Mousy blonde to lilac-tipped blonde</span></button>
+        </div>
+        <button class="res-go" type="button" id="resGo" data-cat="colour"><span id="resGoLabel">Book a balayage like this</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
   <section class="sec" id="work" aria-labelledby="work-h">
     <div class="sec-head">
       <h2 id="work-h">Look through the glass.</h2>
@@ -476,17 +537,6 @@ footer a:hover{color:var(--plat)}
         <figure class="glass w5" style="margin:0"><img loading="lazy" src="https://rokstar.com.au/wp-content/uploads/2026/05/Image_5.jpeg" alt="Close-up of bright, creamy blonde waves" width="1284" height="1259" style="object-position:50% 45%"><figcaption>Creamy blonde waves</figcaption></figure>
       </div>
 
-      <div class="ba-title">
-        <h3>Before and after</h3>
-        <p>Drag the squeegee across each pane.</p>
-      </div>
-      <div class="ba-row" id="baRow">
-        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png"><div class="after" role="img" aria-label="After: long bronde balayage waves"></div><div class="before" role="img" aria-label="Before: flat, one-tone brown lengths"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: brown to bronde balayage"></div>
-        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/image-4.png"><div class="after" role="img" aria-label="After: blended blonde waves"></div><div class="before" role="img" aria-label="Before: brown lengths"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: brown to blended blonde"></div>
-        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/Frame-1000004238.png"><div class="after" role="img" aria-label="After: dimensional balayage waves"></div><div class="before" role="img" aria-label="Before: dark, straight hair"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: dark hair to balayage"></div>
-        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/image-4-2.png"><div class="after" role="img" aria-label="After: bright blonde textured bob"></div><div class="before" role="img" aria-label="Before: longer, warmer blonde"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: warm blonde to bright blonde bob"></div>
-        <div class="ba" data-img="https://rokstar.com.au/wp-content/uploads/2025/10/image-5.png"><div class="after" role="img" aria-label="After: bright, even blonde waves"></div><div class="before" role="img" aria-label="Before: brassy, uneven blonde"></div><span class="tag tb">Before</span><span class="tag ta">After</span><div class="squeegee" aria-hidden="true"><i></i></div><input type="range" min="0" max="100" value="50" aria-label="Compare before and after: brassy to bright blonde"></div>
-      </div>
       <a class="ig" href="https://www.instagram.com/rokstarsalon/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>More every day on Instagram, @rokstarsalon</a>
     </div>
   </section>
@@ -855,14 +905,35 @@ footer a:hover{color:var(--plat)}
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){b.textContent='Code: '+t})}else{b.textContent='Code: '+t}
   })});
 
-  /* before / after squeegee */
-  $$('.ba').forEach(function(ba){
-    var u='url("'+ba.dataset.img+'")';
-    $('.after',ba).style.backgroundImage=u;$('.before',ba).style.backgroundImage=u;
-    var r=$('input',ba);
-    var set=function(){ba.style.setProperty('--x',r.value+'%')};
-    r.addEventListener('input',set);set();
-  });
+  /* before / after stage */
+  var RES=[["https://rokstar.com.au/wp-content/uploads/2025/10/Rectangle-3.png","Brown to bronde balayage","One-tone brown lifted into soft, lived-in bronde with movement through the lengths.","colour","Book a balayage like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-4.png","Brown to blended blonde","Dark, flat lengths taken to a bright, blended blonde that grows out softly.","colour","Book a colour like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-4-2.png","Long blonde to a bright blonde bob","A big chop and a brighter, cleaner blonde in one visit.","blonde","Book a blonde like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-5.png","Golden to bright blonde","Warm, golden blonde refined into a brighter, creamier tone.","blonde","Book a blonde like this"],["https://rokstar.com.au/wp-content/uploads/2025/10/image-4-1.png","Mousy blonde to lilac-tipped blonde","A lifted blonde with a playful hit of lilac on the ends.","colour","Book a colour like this"]];
+  var stage=$('#stage'), sr=$('#stageRange'), touched=false;
+  var setX=function(v){stage.style.setProperty('--x',v+'%')};
+  var load=function(i){
+    var it=RES[i], u='url("'+it[0]+'")';
+    $('.after',stage).style.backgroundImage=u;$('.before',stage).style.backgroundImage=u;
+    $('.after',stage).setAttribute('aria-label','After: '+it[1]);$('.before',stage).setAttribute('aria-label','Before: '+it[1]);
+    sr.setAttribute('aria-label','Before and after: '+it[1]+'. Slide to compare.');
+    sr.value=50;setX(50);
+    $('#resTitle').textContent=it[1];$('#resNote').textContent=it[2];
+    $('#resGo').dataset.cat=it[3];$('#resGoLabel').textContent=it[4];
+    $$('.thumb').forEach(function(b){b.setAttribute('aria-pressed',String(+b.dataset.i===i))});
+  };
+  sr.addEventListener('input',function(){touched=true;setX(sr.value)});
+  $$('.thumb').forEach(function(b){b.addEventListener('click',function(){load(+b.dataset.i)})});
+  $('#resGo').addEventListener('click',function(){var c=this.dataset.cat;selectTab(c);$('#book').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});setTimeout(function(){var t=$('#t-'+c);if(t)t.focus({preventScroll:true})},500)});
+  load(0);
+  /* one-time sweep so visitors see the pane can be wiped */
+  if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var io=new IntersectionObserver(function(es){
+      if(!es[0].isIntersecting)return; io.disconnect();
+      var t0=null, D=1600;
+      var step=function(ts){ if(touched)return; if(t0===null)t0=ts; var k=Math.min(1,(ts-t0)/D);
+        var v=50+32*Math.sin(k*Math.PI*2)*(1-k*.35); if(k>=1)v=50; sr.value=Math.round(v); setX(v); if(k<1)requestAnimationFrame(step); };
+      setTimeout(function(){requestAnimationFrame(step)},350);
+    },{threshold:.6});
+    io.observe(stage);
+  }
 
   /* mobile sticky bar */
   var mbar=$('#mbar'), push=$('#pushbar'), close=$('.close');
